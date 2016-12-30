@@ -31,17 +31,14 @@
 - [docker创建私有仓库](http://www.cnblogs.com/fengzheng/p/5168951.html)
 - [使用 Docker 搭建 Java Web 运行环境](https://my.oschina.net/huangyong/blog/372491)
 - [极客学院](http://wiki.jikexueyuan.com/project/docker-technology-and-combat/enter.html)
-
 - [Docker学习笔记 — Docker私有仓库搭建](http://blog.csdn.net/wangtaoking1/article/details/44180901)
 - [使用Spring Cloud和Docker构建微服务](http://www.open-open.com/lib/view/open1437363835818.html#articleHeader9)
 - [使用docker发布spring cloud应用](http://www.cnblogs.com/skyblog/p/5163691.html)
 - [Docker学习笔记（3）-- 如何使用Dockerfile构建镜像](http://blog.csdn.net/qinyushuang/article/details/43342553)
 - [Ubuntu下Docker固定IP配置及桥接](http://www.linuxidc.com/Linux/2015-02/113783.htm)
 - [Docker-数据卷和数据容器卷](http://www.cnblogs.com/zydev/p/5809616.html)
-
 - [如何进入Docker容器](http://blog.csdn.net/u010397369/article/details/41045251)
 - [精简为王：Docker镜像体积详解](http://www.tuicool.com/articles/Bre2Ybj)
-
 - [深入浅出Docker（二）：Docker命令行探秘](http://www.infoq.com/cn/articles/docker-command-line-quest/)
 - [ Docker Dockerfile详解](http://blog.csdn.net/wsscy2004/article/details/25878223)
 - [两种方式创建你自己的 Docker 基本映像](https://linux.cn/article-5427-1.html)
@@ -49,6 +46,8 @@
 - [Docker学习总结之Run命令介绍](http://www.tuicool.com/articles/uUBVJr)
 - [Dockerfile创建自定义Docker镜像以及CMD与ENTRYPOINT指令的比较](http://www.cnblogs.com/lienhua34/p/5170335.html) 这里看出run 的时候传参
 - [最佳实战Docker持续集成图文详解](http://cloud.51cto.com/art/201507/485900_all.htm) 自动部署可以参考
+- [在Docker上运行微服务](http://www.infoq.com/cn/news/2015/06/qiniu-best531?utm_campaign=infoq_content&)
+- [理解Docker（三）- 微服务的好基友](http://www.tuicool.com/articles/NzUnuuq)
 ##### 问题类
 - [docker 容器故障导致无法启动解决办法](http://blog.csdn.net/fffy2366/article/details/50112535)
 
@@ -110,3 +109,41 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9003:9003 --name='finca
 
 docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='fincar-account-test'   fincar-account:test  '--server.port=9100'   '/logs/nohup.log 2>&1 &' 
 
+
+
+
+
+----
+
+####  搭建私有仓库
+
+centOS:在/etc/init/docker.conf 文件中加入如下配置
+
+````
+OPTIONS='--insecure-registry 192.168.0.179:5000'    #CentOS 7系统
+other_args='--insecure-registry 192.168.0.179:5000' #CentOS 6系统
+````
+
+
+
+ubuntu: 客户端通过HTTP协议拉取镜像，需要添加insecure-registry配置。在ubuntu14.04的环境下编辑docker的配置文件中，添加DOCKER_OPTS选项内容。，操作如下：加入如下内容（IP应为服务端IP）：
+
+````
+$ sudo vi /etc/default/docker
+
+DOCKER_OPTS="--insecure-registry 192.168.142.128:5000"
+
+````
+
+
+
+- ### [Docker daemon日志的位置](http://blog.csdn.net/halcyonbaby/article/details/47336269)
+
+Docker daemon日志的位置，根据系统不同各不相同。  
+
+* Ubuntu - /var/log/upstart/docker.log
+* Boot2Docker - /var/log/docker.log
+* Debian GNU/Linux - /var/log/daemon.log
+* CentOS - /var/log/daemon.log | grep docker
+* Fedora - journalctl -u docker.service
+* Red Hat Enterprise Linux Server - /var/log/messages | grep docker
