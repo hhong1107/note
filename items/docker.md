@@ -48,8 +48,15 @@
 - [最佳实战Docker持续集成图文详解](http://cloud.51cto.com/art/201507/485900_all.htm) 自动部署可以参考
 - [在Docker上运行微服务](http://www.infoq.com/cn/news/2015/06/qiniu-best531?utm_campaign=infoq_content&)
 - [理解Docker（三）- 微服务的好基友](http://www.tuicool.com/articles/NzUnuuq)
+[10个基于DOCKER的顶尖开发工具]: http://www.jdon.com/artichect/top-10-open-source-docker-developer-tools.html
+[]: 
+
+
+
 ##### 问题类
 - [docker 容器故障导致无法启动解决办法](http://blog.csdn.net/fffy2366/article/details/50112535)
+- 乱码问题：
+  - ​
 
 
 ##### Jenkins
@@ -117,6 +124,31 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='finca
 
 ####  搭建私有仓库
 
+
+
+[CentOS 7 : Docker私有仓库搭建和使用]: http://blog.csdn.net/fgf00/article/details/52040492	"22"
+[CentOS7搭建Docker私有仓库]: http://www.centoscn.com/CentosServer/ftp/2015/0426/5280.html
+[]: 
+
+````
+下载镜像
+ sudo docker pull registry  
+ 启动镜像
+ sudo docker run -d -p 5000:5000 registry  
+ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
+ 
+ 那试验地镜像打个tag
+ sudo docker tag busybox 192.168.112.136:5000/busybox  
+````
+
+
+
+
+
+
+
+
+
 centOS:在/etc/init/docker.conf 文件中加入如下配置
 
 ````
@@ -124,7 +156,7 @@ OPTIONS='--insecure-registry 192.168.0.179:5000'    #CentOS 7系统
 other_args='--insecure-registry 192.168.0.179:5000' #CentOS 6系统
 ````
 
-
+[]: 
 
 ubuntu: 客户端通过HTTP协议拉取镜像，需要添加insecure-registry配置。在ubuntu14.04的环境下编辑docker的配置文件中，添加DOCKER_OPTS选项内容。，操作如下：加入如下内容（IP应为服务端IP）：
 
