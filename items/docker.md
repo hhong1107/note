@@ -55,8 +55,37 @@
 
 ##### 问题类
 - [docker 容器故障导致无法启动解决办法](http://blog.csdn.net/fffy2366/article/details/50112535)
+
 - 乱码问题：
-  - ​
+
+  - [docker 容器 中文乱码问题](http://blog.csdn.net/u013092590/article/details/53408415)
+  - [解决docker容器中,日志中文乱码问题](http://blog.csdn.net/zyf_balance/article/details/53172581)
+  - [解决Ubuntu cannot change locale](http://blog.lmlphp.com/archives/94/Solve_Ubuntu_can_not_change_locale_en_US_UTF8)
+  - [解决docker容器中文乱码，修改docker容器编码格式](http://www.cnblogs.com/z-belief/p/6148463.html)
+  - []()
+
+
+  实际解决办法：
+
+   开始设置成为 LANG=en_US.UTF-8 
+
+  但是没有起效果  进系统的时候 会报Cannot set LC_CTYPE to default locale: No such file or directory
+
+  应该是没有安装对应的包  而在docker有比较难安装 所以采用了在Dockfile中加入ENV LANG C.UTF-8
+
+  最终解决了乱码问题
+
+  - []()
+
+  - []()
+
+  - []()
+
+  - []()
+
+    ​
+
+
 
 
 ##### Jenkins
@@ -118,6 +147,8 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='finca
 
 
 
+docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='fincar-common-test'   192.168.3.199:5000/jdk-fincar-common:latest '--server.port=9100'   '/logs/nohup.log 2>&1 &' 
+
 
 
 ----
@@ -128,7 +159,7 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='finca
 
 [CentOS 7 : Docker私有仓库搭建和使用]: http://blog.csdn.net/fgf00/article/details/52040492	"22"
 [CentOS7搭建Docker私有仓库]: http://www.centoscn.com/CentosServer/ftp/2015/0426/5280.html
-[]: 
+[docker 容器 中文乱码问题]: http://blog.csdn.net/u013092590/article/details/53408415
 
 ````
 下载镜像
@@ -164,7 +195,6 @@ ubuntu: 客户端通过HTTP协议拉取镜像，需要添加insecure-registry配
 $ sudo vi /etc/default/docker
 
 DOCKER_OPTS="--insecure-registry 192.168.142.128:5000"
-
 ````
 
 
@@ -179,3 +209,18 @@ Docker daemon日志的位置，根据系统不同各不相同。  
 * CentOS - /var/log/daemon.log | grep docker
 * Fedora - journalctl -u docker.service
 * Red Hat Enterprise Linux Server - /var/log/messages | grep docker
+
+
+
+### 命令
+
+- [Docker学习笔记(2)--Docker常用命令](http://www.tuicool.com/articles/7V7vYn)
+
+````
+删除所有容器
+docker rm `docker ps -a -q`
+````
+
+
+
+docker rm `docker ps -a -q`
