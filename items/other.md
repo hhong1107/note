@@ -39,3 +39,11 @@ Error:java: Compilation failed: internal java compiler error
 
 
 
+
+#### git
+
+删除add:git rm -r --cached .
+
+[git中忽略掉已经add过的文件](https://segmentfault.com/q/1010000004398517)
+
+

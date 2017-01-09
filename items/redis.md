@@ -141,7 +141,8 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 - [ spring整合redis缓存，以注解(@Cacheable、@CachePut、@CacheEvict)形式使用](http://blog.csdn.net/aqsunkai/article/details/51758900)
 - [Spring缓存注解@Cache使用](http://tom-seed.iteye.com/blog/2104430)
 - [@Cacheable注解在spring3中的使用-实现缓存]()
-- []()
+- [spring data redis RedisTemplate操作redis相关用法](http://blog.mkfree.com/posts/515835d1975a30cc561dc35d)
+- [文档](http://www.redis.cn/documentation.html)
 
 ----
 - [Spring Boot中的缓存支持（二）使用Redis做集中式缓存](http://blog.didispace.com/springbootcache2/)
@@ -158,7 +159,7 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 
 - [redis命令](http://www.yiibai.com/redis/keys_ttl.html)
 - [Memcache,Redis,MongoDB（数据缓存系统）方案对比与分析](http://blog.csdn.net/suifeng3051/article/details/23739295)
-- [文档比较详细](http://www.redis.cn/documentation.html)
+- [文档比较详细]([[http://www.redis.cn/documentation.html]])
 - [简单教程](http://www.runoob.com/redis/redis-commands.html)
 - [极客学院的教程](http://wiki.jikexueyuan.com/project/all-about-redis/DataStructure/key/expire.html)
 - []()
