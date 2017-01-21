@@ -47,3 +47,36 @@ Error:java: Compilation failed: internal java compiler error
 [git中忽略掉已经add过的文件](https://segmentfault.com/q/1010000004398517)
 
 
+
+
+
+#### 异常
+
+- org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
+
+- 引起该异常应该是没有对应的xml文件扫面到
+
+- debug 进
+
+  ````
+  org.apache.ibatis.binding.MapperMethod#MapperMethod
+  org.apache.ibatis.binding.MapperMethod.SqlCommand#SqlCommand
+  configuration.hasStatement(statementName) // 这个地方是找不到对应的xml配置的 后面就报错了
+  //这次的原因还是因为在pom中配置了别的系统的 repository包导致了先扫了别的系统的mapper 文件夹没有扫到自己系统的repository
+  ````
+
+  http://ljhzzyx.blog.163.com/blog/static/38380312201412453629988/
+
+
+
+#### mybatis
+
+[spring+mybatis 物理分页](http://blog.csdn.net/flamingsky007/article/details/7195399)
+
+[Mybatis使用篇之十二：实现物理分页](http://chenjc-it.iteye.com/blog/1402965)
+
+
+
+#### spring cloud
+
+[Spring Cloud 异常处理](http://www.cnblogs.com/yish/p/5850813.html)

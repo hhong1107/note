@@ -166,3 +166,7 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 - []()
 - []()
 - []()
+
+#### 命令
+
+清空缓存：./redis-cli KEYS "*" | xargs ./redis-cli DEL
