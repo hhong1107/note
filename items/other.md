@@ -80,3 +80,17 @@ Error:java: Compilation failed: internal java compiler error
 #### spring cloud
 
 [Spring Cloud 异常处理](http://www.cnblogs.com/yish/p/5850813.html)
+
+
+
+#### 其他
+
+[为什么说传统分布式事务不再适用于微服务架构？](http://mp.weixin.qq.com/s/wPeDzVk7UKMFXNWyzUyugg)
+
+[Intellij IDEA 一些不为人知的技巧](Intellij IDEA 一些不为人知的技巧)
+
+[IDEA 使用中的一些方法](http://blog.csdn.net/rznice/article/details/49964373)
+
+[git add时候报错:LF will be replaced by CRLF](http://blog.csdn.net/loovejava/article/details/22114477)
+
+[SIGIR 2016信息检索精选论文](http://geek.csdn.net/news/detail/133916)

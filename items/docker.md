@@ -15,11 +15,50 @@
 
 
 
+#### 环境搭建
+
+一、升级内核（带aufs模块）
+
+    1、yum安装带aufs模块的3.10内核（或到这里下载kernel手动安装：http://down.51cto.com/data/1903250）
+    cd /etc/yum.repos.d 
+    
+    wget http://www.hop5.in/yum/el6/hop5.repo
+    
+    yum install kernel-ml-aufs kernel-ml-aufs-devel
+    2、修改grub的主配置文件/etc/grub.conf，设置default=0，表示第一个title下的内容为默认启动的kernel（一般新安装的内核在第一个位置）。
+    3. 重启 reboot
+    
+    4、重启系统，这时候你的内核就成功升级了。
+    [root@localhost ~]# uname -r
+    3.10.5-3.el6.x86_64
+        查看内核是否支持aufs：
+    [root@localhost ~]# grep aufs /proc/filesystems
+    nodev    aufs
+    
+    二、安装docker
+        1、首先关闭selinux：
+    setenforce 0
+    sed -i '/^SELINUX=/c\SELINUX=disabled' /etc/selinux/config
+        2、在Fedora EPEL源中已经提供了docker-io包，下载安装epel：
+    rpm -ivh http://mirrors.sohu.com/fedora-epel/6/x86_64/epel-release-6-8.noarch.rpm
+    sed -i 's/^mirrorlist=https/mirrorlist=http/' /etc/yum.repos.d/epel.repo
+        3、yum安装docker-io：
+     	
+    yum -y install docker-io
+    
+http://www.centoscn.com/image-text/install/2014/1128/4202.html
+
+http://www.linuxidc.com/Linux/2014-07/104768.htm
+
+http://www.server110.com/docker/201411/11105.html
+
+
+
 #### 参考网站
 
 ##### 教程类
 - [教程](http://www.runoob.com/docker/docker-command-manual.html)
-- [Docker实战-书籍](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1?fr=aladdin&key=docker教程&f=read###)\
+- [Docker实战-书籍](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1?fr=aladdin&key=docker教程&f=read###)
 - [利用Docker构建开发环境](http://tech.uc.cn/?p=2726)
 - [Docker终极指南](http://dockone.io/article/133)
 
@@ -48,6 +87,7 @@
 - [最佳实战Docker持续集成图文详解](http://cloud.51cto.com/art/201507/485900_all.htm) 自动部署可以参考
 - [在Docker上运行微服务](http://www.infoq.com/cn/news/2015/06/qiniu-best531?utm_campaign=infoq_content&)
 - [理解Docker（三）- 微服务的好基友](http://www.tuicool.com/articles/NzUnuuq)
+- [介绍 Docker 的 pulldocker 和 CVFS](https://www.oschina.net/translate/docker-without-containers-pulldocker)
 [10个基于DOCKER的顶尖开发工具]: http://www.jdon.com/artichect/top-10-open-source-docker-developer-tools.html
 []: 
 
@@ -75,15 +115,15 @@
 
   最终解决了乱码问题
 
-  - []()
+- []()
 
-  - []()
+- []()
 
-  - []()
+- []()
 
-  - []()
+- []()
 
-    ​
+  ​
 
 
 
@@ -147,7 +187,7 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='finca
 
 
 
-docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='fincar-common-test'   192.168.3.199:5000/jdk-fincar-common:latest '--server.port=9100'   '/logs/nohup.log 2>&1 &' 
+docker run  --net=host -v /tmp/fincar-logs:/logs -p 9102:9102 --name='fincar-account-3'   192.168.3.199:5000/fincar-account:V001 '--server.port=9102'  '--config.profile=test'   '/logs/nohup.log 2>&1 &' 
 
 
 
@@ -157,7 +197,7 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='finca
 
 
 
-[CentOS 7 : Docker私有仓库搭建和使用]: http://blog.csdn.net/fgf00/article/details/52040492	"22"
+[CentOS 7 : Docker私有仓库搭建和使用]: http://blog.csdn.net/fgf00/article/details/52040492
 [CentOS7搭建Docker私有仓库]: http://www.centoscn.com/CentosServer/ftp/2015/0426/5280.html
 [docker 容器 中文乱码问题]: http://blog.csdn.net/u013092590/article/details/53408415
 
@@ -180,14 +220,14 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='finca
 
 
 
-centOS:在/etc/init/docker.conf 文件中加入如下配置
+centOS:vi /etc/sysconfig/docker 文件中加入如下配置
 
 ````
 OPTIONS='--insecure-registry 192.168.0.179:5000'    #CentOS 7系统
 other_args='--insecure-registry 192.168.0.179:5000' #CentOS 6系统
 ````
 
-[]: 
+加入后需要重启一下   service docker restart
 
 ubuntu: 客户端通过HTTP协议拉取镜像，需要添加insecure-registry配置。在ubuntu14.04的环境下编辑docker的配置文件中，添加DOCKER_OPTS选项内容。，操作如下：加入如下内容（IP应为服务端IP）：
 
