@@ -9,4 +9,4 @@
 - [Spring Cloud构建微服务架构](http://blog.didispace.com/tag/spring-cloud/)
 - [Spring Cloud学习笔记——Netflix的那些东西](http://blog.loli.io/2016/02/21/spring-cloud-netflix-01/)
 - [7天学会spring cloud教程
-
+- [ Spring Cloud中，Eureka常见问题总结](http://blog.csdn.net/lc0817/article/details/54375802)

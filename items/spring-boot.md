@@ -21,7 +21,7 @@
 - [微服务框架](http://www.cnblogs.com/skyblog/category/774535.html)
 - [Spring Boot 属性配置和使用 ](http://blog.csdn.net/isea533/article/details/50281151)
 - [ Spring Boot 静态资源处理 ](http://blog.csdn.net/isea533/article/details/50412212)
-
+- [Spring Boot Junit单元测试](https://yq.aliyun.com/articles/6925)
 
 ![example](../label/img/架构图.png)
 
