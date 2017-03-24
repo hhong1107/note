@@ -135,6 +135,7 @@ mongodb：写入mongodb库
 - [Elasticsearch权威指南（中文版）](http://es.xiaoleilu.com/010_Intro/10_Installing_ES.html)
 - [分布式日志平台--ELKStack实践](http://ucode.blog.51cto.com/10837891/1775157)
 - [ELKstack 中文指南](http://kibana.logstash.es/content/logstash/get-start/hello-world.html)
+- [linux screen 命令详解](http://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)
 
 [ElasticSearch 5学习(2)——Kibana+X-Pack介绍使用（全）]: http://www.cnblogs.com/wxw16/p/6156335.html?utm_source=itdadao&amp;utm_medium=referral
 

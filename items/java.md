@@ -29,4 +29,9 @@ static {
 #### 其他
 
 - [ 史上最全的java随机数生成算法](http://blog.csdn.net/yaerfeng/article/details/18362623)
-- [Java获取随机数的3种方法
+- [JSch - Java实现的SFTP（文件上传详解篇）](http://www.cnblogs.com/longyg/archive/2012/06/25/2556576.html)
+- [JSch - Java实现的SFTP（文件下载详解篇）](http://www.cnblogs.com/longyg/archive/2012/06/25/2561332.html)
+- [Java内部类的使用小结](http://android.blog.51cto.com/268543/384844/)
+- [bigdecimal 保留小数位](http://www.cnblogs.com/liqforstudy/p/5652517.html)
+- [使用BigDecimal进行精确运算](http://www.cnblogs.com/chenssy/archive/2012/09/09/2677279.html)
+- [Spring对注解(Annotation)处理源码分析2——解析和注入注解配置的资源](http://blog.csdn.net/chjttony/article/details/6301591)
