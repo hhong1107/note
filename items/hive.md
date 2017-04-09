@@ -19,3 +19,21 @@ http://www.aboutyun.com/thread-7870-1-1.html
 于是，你又问MR和HDFS哪里像了?
 
 http://fireinjava.iteye.com/blog/1779420
+http://www.cnblogs.com/viviman/archive/2013/01/29/2881784.html
+
+
+- [基于Hadoop的数据仓库Hive 基础知识]()
+- [使用 Hive 构建数据仓库](http://www.ibm.com/developerworks/cn/data/library/bd-hivewarehouse/)
+- [基于Hadoop的数据仓库Hive 学习指南](http://blog.csdn.net/achuo/article/details/51332214)
+- [Hive定义、Hive与HBase关系、Hive与RDBMS的关系、数据库与数据仓库的区别](http://blog.csdn.net/u012110719/article/details/48690189)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()

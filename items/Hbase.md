@@ -21,20 +21,39 @@
 - [hbase安装配置（整合到hadoop）](http://blog.csdn.net/hguisu/article/details/7244413)
 - [手把手教你配置Hbase完全分布式环境](https://my.oschina.net/lanzp/blog/348116)
 - [Hadoop安装教程_单机/伪分布式配置_Hadoop2.6.0/Ubuntu14.04](http://www.powerxing.com/install-hadoop/)
+- [HBase的特征和优点](http://www.thebigdata.cn/HBase/13396.html)
+- [HBase在腾讯大数据的应用实践](http://www.thebigdata.cn/HBase/14270.html)
+- [HBase与Zookeeper数据结构查询](http://www.thebigdata.cn/HBase/13255.html)
+- [HBase相关文档](http://www.thebigdata.cn/HBase/defaultp5.html)
+- [HBase最佳实践-列族设计优化](http://www.thebigdata.cn/HBase/30518.html)
+- [那么问题来了：我们为什么要选择 Hbase？](http://www.thebigdata.cn/HBase/30332.html)
+- [从零自学Hadoop(21)：HBase数据模型相关操作下](http://www.thebigdata.cn/HBase/30332.html)
+- [HBase最佳实践 – 集群规划](http://www.thebigdata.cn/HBase/32604.html)
+- [Apache HBase 入门](http://www.thebigdata.cn/HBase/32562.html)
+- [HBase在腾讯大数据的应用实践](http://developer.51cto.com/art/201506/479413.htm)
+- [Spark,Hive,HBase相互结合--数据读取和计算的几种方式](http://www.th7.cn/db/mssql/201609/205978.shtml)
+- [使用spark进行hbase数据分析](http://blog.sina.com.cn/s/blog_a07df5fd0102w043.html)
+- [Spark操作Hbase](http://blog.csdn.net/yhb315279058/article/details/50466103)
+- [HBase 高性能加入数据 - 按批多“粮仓”式解决办法](http://www.cnblogs.com/wgp13x/p/4319466.html)
+- [HBase数据模型解析和基本的表设计分析](http://blog.csdn.net/ymh198816/article/details/51244911)
+- [Spark与HBase的整合](http://www.tuicool.com/articles/jY3iIrN)
 
+- []()
+- []()
+- []()
 
 
 ### Hadoop相关的命令
 
 ````
 - 重新格式化 如果报配置的 文件目录找不到的话 需要重新格式化一下
-bin/hadoop namenode   –format 
+bin/hadoop namenode   –format
 - 启动集群
 bin/start-all.sh
 - 这个应该类似于查看系统状态的
 bin/hadoop  dfsadmin  –report
 - 离开安全模式
-hadoop dfsadmin -safemode leave 
+hadoop dfsadmin -safemode leave
 ````
 
 启动的时候会有短暂的安全模式 等一下让他过去就好
@@ -70,7 +89,7 @@ hadoop dfsadmin -safemode leave
 
 这个异常一般是Hadoop没启动好查看Hadoop启动的模式和jar包是否一致等。注意看Hadoop的启动日志
 
-启动正常的话  应该在每个节点上都启动 
+启动正常的话  应该在每个节点上都启动
 
 
 

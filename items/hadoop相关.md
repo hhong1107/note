@@ -29,3 +29,18 @@
 - [浅析hadoop写入数据api](http://blog.csdn.net/qiuchenl/article/details/8617990)
 - [Hadoop第4周练习—HDFS读写文件操作](http://www.cnblogs.com/shishanyuan/p/4172806.html)
 
+- [全栈工程师-Hadoop, HBase, Hive, Spark](http://www.cnblogs.com/charlesblc/p/6014158.html)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+
+- []()
+- []()
+- []()
+- []()
