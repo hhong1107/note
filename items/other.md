@@ -94,3 +94,5 @@ Error:java: Compilation failed: internal java compiler error
 [git add时候报错:LF will be replaced by CRLF](http://blog.csdn.net/loovejava/article/details/22114477)
 
 [SIGIR 2016信息检索精选论文](http://geek.csdn.net/news/detail/133916)
+[Linux用数字设置权限](http://blog.csdn.net/u013063153/article/details/53113979)
+[技术博客](https://my.oschina.net/itblog/home)

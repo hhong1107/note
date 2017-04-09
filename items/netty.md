@@ -14,7 +14,7 @@
 - [Netty高性能大容量Socket并发（一）：Netty性能测试](http://blog.csdn.net/sqldebug_fan/article/details/49801259)
 - [Netty实现高性能RPC服务器优化篇之消息序列化](http://www.cnblogs.com/jietang/p/5675171.html)
 - [netty处理粘包问题——1](http://blog.csdn.net/bestone0213/article/details/47108419)
-- []()
+- [Netty](http://lippeng.iteye.com/blog/1907279)
 - []()
 - []()
 - []()

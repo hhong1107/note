@@ -7,6 +7,7 @@
 - [AOP](#aop)
 - [spring boot start](#spring-boot-start)
 - [获取配置文件值](#获取配置文件值)
+- [参考网站](#参考网站)
 
 <!-- tocstop -->
 
@@ -22,7 +23,15 @@
 - [Spring Boot 属性配置和使用 ](http://blog.csdn.net/isea533/article/details/50281151)
 - [ Spring Boot 静态资源处理 ](http://blog.csdn.net/isea533/article/details/50412212)
 - [Spring Boot Junit单元测试](https://yq.aliyun.com/articles/6925)
-
+- [如何优雅地停止运行中的内嵌Tomcat的Spring Boot应用](http://jaskey.github.io/blog/2016/04/05/shutdown-spring-boot-application-gracefully/)
+- [正确、安全地停止SpringBoot应用服务](http://www.jianshu.com/p/44ef43b282f0)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 ![example](../label/img/架构图.png)
 
 
@@ -43,6 +52,7 @@ private @Value("#{T(java.util.Arrays).asList(projectProperties['my.list.of.strin
 
 #### 其他
 - [Spring-boot中读取config配置文件的两种方式](http://www.aichengxu.com/view/2543992)
+- [在Spring Boot中使用 @ConfigurationProperties 注解](在Spring Boot中使用 @ConfigurationProperties 注解)
 ```
 @ConfigurationProperties(prefix = "spring.db_items",locations = "classpath:config/db.properties")
 ```
