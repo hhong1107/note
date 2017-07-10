@@ -25,6 +25,20 @@ static {
 
 
 
+#### java调用js
+
+- [在Java中直接调用js代码](http://blog.csdn.net/xzyxuanyuan/article/details/8062887)
+- -[JS函数调用的四种方法](http://www.cnblogs.com/leejersey/p/3663278.html)
+- [JS生成随机字符串的多种方法](http://www.jb51.net/article/50910.htm)
+- -[JS产生随机数的几个用法！](http://www.cnblogs.com/banbu/archive/2012/07/25/2607880.html)
+- -[JS中的JSON对象 定义和取值](http://www.cnblogs.com/yangdm/p/5081080.html)
+- -[JAVA中脚本语言的使用](http://blog.csdn.net/jasonware/article/details/51954727) 参考这个网站
+- [JAVA运行脚本语言(Scripting)](http://blog.csdn.net/atco/article/details/51144835)
+
+
+
+
+
 
 #### 其他
 
@@ -45,6 +59,29 @@ static {
 - [Java并发中常用同步工具类](https://my.oschina.net/itblog/blog/775918)
 - [ Dom4j解析和生成XML文档](http://blog.csdn.net/chenghui0317/article/details/11486271)
 - [使用Dom4j解析XML](http://blog.csdn.net/redarmy_chen/article/details/12969219)
+- [Java解决UTF-8 BOM问题](http://blog.csdn.net/dream_it_life/article/details/6045140)
+- [Java正确判别出文件的字符集（尤其是带BOM和不带BOM的UTF-8字符)](http://blog.csdn.net/oicqxiesidilieric/article/details/8464630)
+- [优先使用TimeUnit类中的sleep](http://www.importnew.com/7219.html)
+- -[JSON序列化和反序列化的时候日期处理](http://blog.csdn.net/u011113654/article/details/50470893)
+- -[fackson /常用注解/ annotation](http://blog.csdn.net/u010457406/article/details/50921632)
+- [解决hbase-client中guava包冲突问题](http://blog.csdn.net/ludonqin/article/details/52387769) 最后使用16.0 的版本 需要在每个项目中显式的添加一下
+- [SpringBoot --集成HBASE/基于SpringDataHadoop](http://blog.csdn.net/cwenao/article/details/57980188)
+- [hbaseclient官方api](http://hbase.apache.org/apidocs/org/apache/hadoop/hbase/client/Scan.html)
+- [HBase的特征和优点](http://www.thebigdata.cn/HBase/13396.html)
+- [HBase最佳实践-列族设计优化](http://www.thebigdata.cn/HBase/30518.html)
+- [我们为什么要选择 Hbase](http://www.thebigdata.cn/HBase/30332.html)
+- [HBase在腾讯大数据的应用实践](http://developer.51cto.com/art/201506/479413.htm)
+- [HBase客户端API基本操作](http://www.thebigdata.cn/HBase/14513.html)
+- -[HBase的基本操作](http://www.cnblogs.com/MOBIN/p/4647556.html)
+- [HBase中Scan类属性maxResultSize的说明](https://my.oschina.net/psuyun/blog/375637)
+- [HBase shell scan 模糊查询](http://www.th7.cn/db/nosql/201511/144465.shtml)
+- [HBase 常用Shell命令](http://www.cnblogs.com/nexiyi/p/hbase_shell.html)
+- [HBase基本数据操作详解](http://blog.csdn.net/wulantian/article/details/41011297)
+- [java工具类 获取包下所有类](http://blog.csdn.net/jdzms23/article/details/17550119)
+- -[java中的Maven项目的两种打包方法](http://blog.csdn.net/u010910436/article/details/48290323)
+- [使用Cookie进行会话管理](http://blog.csdn.net/yerenyuan_pku/article/details/51945105)
+- -[JAVA解析Excel文件的两种方式 --jxl技术](http://max1487.iteye.com/blog/2298291)
+- [Java调用linux shell脚本的方法](http://www.jb51.net/article/61529.htm)
 - []()
 - []()
 - []()
@@ -55,3 +92,26 @@ static {
 - []()
 - []()
 - []()
+
+#### 代码块
+
+- [使用visualvm远程监控JVM LINUX服务器与客户端配置方法](http://blog.csdn.net/xianzhi/article/details/22298525)
+
+  ````shell
+  java -Dcom.sun.management.jmxremote.port=8099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.3.199 -jar ./ddsc-supervise-server-1.0.0-SNAPSHOT.jar
+  ````
+
+  ​
+
+  ​
+
+  ​
+
+- [杂记--泛型与json解析（fastjson）](http://blog.csdn.net/u013583905/article/details/49281639)
+
+
+````java
+BaseBean<CategoryBean> cat=JSON.parseObject(str, new TypeReference<BaseBean<CategoryBean>>(){});	
+List<CategoryBean> list= cat.getData();
+````
+

@@ -28,8 +28,13 @@
 - [Hadoop Hive与Hbase关系 整合](http://blog.csdn.net/liuzhenwen/article/details/28078625)
 - [浅析hadoop写入数据api](http://blog.csdn.net/qiuchenl/article/details/8617990)
 - [Hadoop第4周练习—HDFS读写文件操作](http://www.cnblogs.com/shishanyuan/p/4172806.html)
-
 - [全栈工程师-Hadoop, HBase, Hive, Spark](http://www.cnblogs.com/charlesblc/p/6014158.html)
+- [adoop常见错误及处理方法](http://blog.csdn.net/yonghutwo/article/details/9206059)
+- -[HBase Master高可用（HA）](http://www.cnblogs.com/captainlucky/p/4710642.html)
+- [为Hbase建立高可用性多主节点](http://www.importnew.com/3020.html)
+- [Hadoop 2.0 HA高可用集群配置详解](http://blog.csdn.net/carl810224/article/details/52160418)
+- []()
+- []()
 - []()
 - []()
 - []()
@@ -40,7 +45,17 @@
 - []()
 - []()
 
-- []()
-- []()
-- []()
-- []()
+#### 其他
+
+
+
+````
+参考连接http://blog.csdn.net/u011763190/article/details/50828410 
+解决办法： 
+生成秘钥：如果本地环境有则不需要 
+ssh-keygen -t rsa -P “” 
+实现本地登录免密码登录，因为搭建的时候，我们做了对其他主机的免密码登录，但是本地ssh连接本地没有 
+所以，讲本地的公钥导入私钥就可以 
+cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+````
+

@@ -32,7 +32,7 @@
 - []()
 - []()
 - []()
-![example](../label/img/架构图.png)
+  ![example](../label/img/架构图.png)
 
 
 启动：

@@ -96,3 +96,24 @@ Error:java: Compilation failed: internal java compiler error
 [SIGIR 2016信息检索精选论文](http://geek.csdn.net/news/detail/133916)
 [Linux用数字设置权限](http://blog.csdn.net/u013063153/article/details/53113979)
 [技术博客](https://my.oschina.net/itblog/home)
+
+[RandomAccessFile 的默认编码为ISO-8859-1](http://v.youku.com/v_show/id_XMjY3NzU2MTA2MA==.html?spm=a2h0j.8191423.item_XMjY3NzU2MTA2MA==.A)
+
+[linux tomcat日志错误Cannot run without an instance id & java.net.UnknownHostException](http://blog.csdn.net/zero_295813128/article/details/52813146)
+
+[linux的hostname修改详解](http://soft.chinabyte.com/os/281/11563281.shtml)
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+[]()
+
+
+
+
+

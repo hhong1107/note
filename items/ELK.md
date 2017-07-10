@@ -139,3 +139,11 @@ mongodb：写入mongodb库
 
 [ElasticSearch 5学习(2)——Kibana+X-Pack介绍使用（全）]: http://www.cnblogs.com/wxw16/p/6156335.html?utm_source=itdadao&amp;utm_medium=referral
 
+
+
+[启动时使用多个配置文件](http://blog.csdn.net/ty_0930/article/details/52180470)
+
+````
+./logstash -f ../../conf/
+````
+

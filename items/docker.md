@@ -5,16 +5,16 @@
 				- [教程类](#教程类)
 				- [工具类](#工具类)
 - [国内仓库](#国内仓库httpsc163comhubmhome)
-				- [杂类](#杂类)
-				- [问题类](#问题类)
-				- [Jenkins](#jenkins)
-			- [杂记](#杂记)
-				- [进入容器命令](#进入容器命令)
-				- [Docker的四种网络模式](#docker的四种网络模式)
-				- [启动命令](#启动命令)
-			- [搭建私有仓库](#搭建私有仓库)
-		- [Docker daemon日志的位置](#docker-daemon日志的位置httpblogcsdnnethalcyonbabyarticledetails47336269)
-		- [命令](#命令)
+     - [杂类](#杂类)
+         - [问题类](#问题类)
+            - [Jenkins](#jenkins)
+            - [杂记](#杂记)
+            - [进入容器命令](#进入容器命令)
+            - [Docker的四种网络模式](#docker的四种网络模式)
+            - [启动命令](#启动命令)
+            - [搭建私有仓库](#搭建私有仓库)
+         - [Docker daemon日志的位置](#docker-daemon日志的位置httpblogcsdnnethalcyonbabyarticledetails47336269)
+         - [命令](#命令)
 
 <!-- tocstop -->
 
@@ -26,20 +26,20 @@
 
     1、yum安装带aufs模块的3.10内核（或到这里下载kernel手动安装：http://down.51cto.com/data/1903250）
     cd /etc/yum.repos.d
-
+    
     wget http://www.hop5.in/yum/el6/hop5.repo
-
+    
     yum install kernel-ml-aufs kernel-ml-aufs-devel
     2、修改grub的主配置文件/etc/grub.conf，设置default=0，表示第一个title下的内容为默认启动的kernel（一般新安装的内核在第一个位置）。
     3. 重启 reboot
-
+    
     4、重启系统，这时候你的内核就成功升级了。
     [root@localhost ~]# uname -r
     3.10.5-3.el6.x86_64
         查看内核是否支持aufs：
     [root@localhost ~]# grep aufs /proc/filesystems
     nodev    aufs
-
+    
     二、安装docker
         1、首先关闭selinux：
     setenforce 0
@@ -48,7 +48,7 @@
     rpm -ivh http://mirrors.sohu.com/fedora-epel/6/x86_64/epel-release-6-8.noarch.rpm
     sed -i 's/^mirrorlist=https/mirrorlist=http/' /etc/yum.repos.d/epel.repo
         3、yum安装docker-io：
-
+    
     yum -y install docker-io
 
 http://www.centoscn.com/image-text/install/2014/1128/4202.html
@@ -67,8 +67,10 @@ http://www.server110.com/docker/201411/11105.html
 - [微服务革命：容器化的应用、数据及其它一切](http://www.infoq.com/cn/articles/microservices-revolution)
 - [肖德时：如何用Docker来管理微服务架构的乱网](http://www.infoq.com/cn/articles/docker-microservice-architect)
 - [如何优雅地停止运行中的内嵌Tomcat的Spring Boot应用](http://jaskey.github.io/blog/2016/04/05/shutdown-spring-boot-application-gracefully/)
-- []()
-- []()
+- [使用Weave实现Docker多宿主机互联](http://www.tuicool.com/articles/YJF7ben)
+- [Docker监控及日志采集神器](https://segmentfault.com/a/1190000007595832)
+- [Docker本地仓库简单使用一些例子](http://www.111cn.net/sys/linux/118539.htm)
+- [官方安装指南](https://store.docker.com/editions/community/docker-ce-server-centos) 按照这个就能使用
 ##### 教程类
 - [教程](http://www.runoob.com/docker/docker-command-manual.html)
 - [Docker实战-书籍](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1?fr=aladdin&key=docker教程&f=read###)
@@ -101,6 +103,21 @@ http://www.server110.com/docker/201411/11105.html
 - [在Docker上运行微服务](http://www.infoq.com/cn/news/2015/06/qiniu-best531?utm_campaign=infoq_content&)
 - [理解Docker（三）- 微服务的好基友](http://www.tuicool.com/articles/NzUnuuq)
 - [介绍 Docker 的 pulldocker 和 CVFS](https://www.oschina.net/translate/docker-without-containers-pulldocker)
+- [CentOS系统下docker的安装配置及使用详解](https://www.server110.com/docker/201411/11105.html) 这里有容器持久化的 可能会需要
+- [如何在Docker容器内外互相拷贝数据？](http://blog.csdn.net/yangzhenping/article/details/43667785)
+- [docker容器故障致无法启动解决实例](http://www.mincoder.com/article/4045.shtml)
+- [使用Docker容器的十大误区](http://www.open-open.com/lib/view/open1463108483467.html)
+- [Docker 容器日志的那些事儿](http://blog.csdn.net/shlazww/article/details/47283617)
+  -[Docker 清理命令集锦](http://blog.csdn.net/huangjin0507/article/details/51162869)
+
+-[docker 1.12.3版本搭建私有仓库，上传镜像报错：server gave HTTP response to HTTPS client”](https://www.bbsmax.com/A/A7zg22MVd4/)
+
+
+
+
+
+
+
 [10个基于DOCKER的顶尖开发工具]: http://www.jdon.com/artichect/top-10-open-source-docker-developer-tools.html
 []:
 
@@ -196,6 +213,30 @@ docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9003:9003 --name='finca
 
 
 
+##### Docker容器时间同步问题
+
+````
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+````
+
+http://dockone.io/question/505
+
+
+
+##### 删除none的镜像
+
+````shell
+docker ps -a | grep "Exited" | awk '{print $1 }'|xargs docker stop
+docker ps -a | grep "Exited" | awk '{print $1 }'|xargs docker rm
+docker images|grep none|awk '{print $3 }'|xargs docker rmi
+
+````
+
+
+
+
+
 docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='fincar-account-test'   fincar-account:test  '--server.port=9100'   '/logs/nohup.log 2>&1 &'
 
 
@@ -221,7 +262,7 @@ docker run  --net=host -v /tmp/fincar-logs:/logs -p 9102:9102 --name='fincar-acc
  sudo docker run -d -p 5000:5000 registry  
  sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
 
- 那试验地镜像打个tag
+ 那试验地镜像打个tag：:q
  sudo docker tag busybox 192.168.112.136:5000/busybox  
 ````
 
@@ -277,3 +318,26 @@ docker rm `docker ps -a -q`
 
 
 docker rm `docker ps -a -q`
+
+- [Docker 重命名镜像 TAG](http://blog.csdn.net/a19891024/article/details/68946065)
+
+````
+docker tag IMAGEID(镜像id) REPOSITORY:TAG（仓库：标签）
+
+#例子
+docker tag ca1b6b825289 registry.cn-hangzhou.aliyuncs.com/xxxxxxx:v1.0
+````
+
+
+
+- 搭建支付系统
+
+
+
+````shell
+docker run -idt --net=host -v /tmp/ddsc-log:/logs -v /.keys:/.keys  -p 8118:8118 --name=ddsc-pay  ddsc.dock.registry:5000/ddsc-pay:1.0.0 '--server.port=8118'  '--config.profile=prod' '--spring.cloud.config.label=DEV20170301'
+
+
+docker build -t ddsc.dock.registry:5000/ddsc-pay:1.0.0  .
+````
+

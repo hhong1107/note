@@ -10,7 +10,7 @@
 - [Hystrix-工作原理](http://wangweiqing.github.io/blog/2016/06/20/hystrix-gong-zuo-yuan-li/)
 - [Hystrix让你的应用更有弹性](https://stonetingxin.gitbooks.io/hystrix/content/hystrix_at_work.html)
 - [github](https://github.com/Netflix/Hystrix/wiki/How-To-Use)
-- ​
+- ​[附2 hystrix详述（2）- 配置](http://www.cnblogs.com/java-zhao/p/5524584.html)  配置参考这里
 - []()
 - []()
 - []()

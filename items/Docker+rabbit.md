@@ -10,7 +10,7 @@
 - 重启容器
   - docker start some-rabbit
 - 查看日志
- docker logs docker容器的名字或进程id
+   docker logs docker容器的名字或进程id
 
 
 #### 问题

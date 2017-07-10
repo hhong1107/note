@@ -7,7 +7,7 @@
 ![](../label/img/spring_cloud_config/6fIFBf.png!web)
 
 ### 搭建步骤
-  1. 在git服务器上创建一个项目用于存放配置文件
+1.   在git服务器上创建一个项目用于存放配置文件
   > - 文件命名规范: 如 fincar-account-test.properties
   > - 可以分成两部分: {application}- {profile}.properties
   > - profile
@@ -20,10 +20,11 @@
   > - {profile} 匹配客户端的”spring.active.profiles”
   > - {label} 如果是svn匹配trunk/branchs等.
 
-  1. 创建spring cloud配置服务器
+1.   创建spring cloud配置服务器
   > - @EnableConfigServer
   > - 搭建好后可以访问 http://localhost:8888/{application}/{profile}/{label}
   > - 如 http://127.0.0.1:8888/fincar-account/test
+  > - 192.168.3.:8001/ddsc-account/test/DEV20170301
 
   1. 客户端使用该配置中心
   ```
