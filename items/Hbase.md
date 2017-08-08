@@ -56,6 +56,8 @@
 - [HBase数据迁移（3）-自己编写MapReduce Job导入数据](http://www.importnew.com/3912.html)
 - [Hbase 建表基本命令总结](http://blog.csdn.net/kky2010_110/article/details/12616137)
 - -[hbase总结：hbase client访问的超时时间、重试次数、重试间隔时间的配置](http://blog.csdn.net/jamin_tan007/article/details/50055549)
+- [HBase数据导入的几种操作](http://blog.csdn.net/scgaliguodong123_/article/details/46771929)
+- [HBase 0.96.0 的数据导入: 利用ImportTsv，completebulkload，Import](http://blog.csdn.net/samhacker/article/details/21282243)
 - []()
 - []()
 - []()
@@ -103,6 +105,7 @@ hadoop dfsadmin -safemode leave
 - [深入HBase架构解析（一）](http://www.blogjava.net/DLevin/archive/2015/08/22/426877.html)
 - [HBase 默认配置](http://eclecl1314-163-com.iteye.com/blog/1474286)
 - [hbase教程](http://www.yiibai.com/hbase/hbase_describe_and_alter.html)
+- ​
 
 ### 异常处理
 
@@ -324,4 +327,10 @@ hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=testfm:inc
 
 ./hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles /test_income/storefile-outputdir testt
 ````
+
+
+
+
+
+
 

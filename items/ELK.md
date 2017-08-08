@@ -24,7 +24,7 @@
 
 [ELKstack 中文指南](http://kibana.logstash.es/content/logstash/plugins/filter/grok.html)
 
-
+[指南](https://kibana.logstash.es/content/kibana/v5/discover.html)
 
 ````xml
 <dependency>  

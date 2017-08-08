@@ -6,19 +6,79 @@
 
 
 - [myBatis连接MySQL报错误：No operations allowed after conn](https://my.oschina.net/baishi/blog/203410) 出现这种问题 非常危险，同时有可能错误日志把硬盘塞满
+
 - [Druid连接池基本配置](http://www.jianshu.com/p/4cb04939e370)  有密码加密的
+
 - [Spring Boot 属性配置和使用 ](http://blog.csdn.net/isea533/article/details/50281151)
+
+- [MYSQL如何设置大小写敏感](https://zhidao.baidu.com/question/2267340607864742028.html)
+
+  ````
+  1、linux下mysql安装完后是默认：区分表名的大小写，不区分列名的大小写； 
+  2、用root帐号登录后，在/etc/my.cnf 中的[mysqld]后添加添加lower_case_table_names=1，重启MYSQL服务，这时已设置成功：不区分表名的大小写； 
+  lower_case_table_names参数详解： 
+  lower_case_table_names = 0 
+  其中 0：区分大小写，1：不区分大小写 
+  MySQL在Linux下数据库名、表名、列名、别名大小写规则是这样的： 
+  　　 1、数据库名与表名是严格区分大小写的； 
+  　　 2、表的别名是严格区分大小写的； 
+  　　 3、列名与列的别名在所有的情况下均是忽略大小写的； 
+  　　 4、变量名也是严格区分大小写的； 
+  MySQL在Windows下都不区分大小写。 
+  3、如果想在查询时区分字段值的大小写，则：字段值需要设置BINARY属性，设置的方法有多种： 
+  A、创建时设置： 
+  CREATE TABLE T( 
+  A VARCHAR(10) BINARY 
+  ); 
+  B、使用alter修改： 
+  ALTER TABLE `tablename` MODIFY COLUMN `cloname` VARCHAR(45) BINARY; 
+  C、mysql table editor中直接勾选BINARY项。
+  ````
+
+  ​
+
+  ​	
+
+  #### 所问题
+
+  ````sql
+  show status like '%lock%';
+
+
+  show global variables like '%time%' ;
+
+  show engine innodb status;
+  -- 查看线程数据
+  show processlist;
+
+  -- 查看是否有锁
+  select * from information_schema.innodb_trx;
+
+  kill 1175;
+  ````
+
+  ​
+
 - []()
+
 - []()
+
 - []()
+
 - []()
+
 - []()
+
 - []()
+
 - []()
+
 - []()
+
 - []()
+
 - []()
-- []()
+
 - []()
 
 

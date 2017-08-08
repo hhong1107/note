@@ -291,6 +291,7 @@ unzip file.zip //解压zip
   (8)、*.rar 用 unrar e解压
 
   (9)、*.zip 用 unzip 解压
+  
 ````
 
 
@@ -305,7 +306,7 @@ unzip file.zip //解压zip
 
 ------
 
-
+[centos7重新调整分区大小](http://blog.csdn.net/perfectzq/article/details/73606119)  之前没有重新挂载回home会导致系统没法重新启动
 
 [http://www.centoscn.com/CentOS/2015/0430/5321.html](http://www.centoscn.com/CentOS/2015/0430/5321.html)
 
