@@ -23,6 +23,8 @@ hive.fetch.task.conversion=none
 
 -[hue git地址](https://github.com/cloudera/hue)
 
+-[hue官网](http://gethue.com/hadoop-tutorials-series-ii-8-how-to-transfer-data/)
+
 https://github.com/cloudera/hue/tree/master/tools/docker
 
 #### 参考网站
@@ -57,6 +59,14 @@ https://github.com/cloudera/hue/tree/master/tools/docker
 
 -[Hue（四）集成Hive](http://blog.csdn.net/maomaosi2009/article/details/45648829)
 
+-[HUE配置文件hue.ini 的sqoop模块详解（图文详解）（分HA集群）](http://www.cnblogs.com/zlslch/p/6820409.html)
+
+-[sqoop2-1.99.5-cdh5.5.4.tar.gz的部署搭建](http://www.cnblogs.com/zlslch/p/6821763.html)
+
+-[框架Hue环境的搭建](http://www.jianshu.com/p/87b76a686216)
+
+[HUE的简单介绍](http://blog.csdn.net/ywheel1989/article/details/51560312)
+
 
 
 #### 问题查询
@@ -68,6 +78,8 @@ https://github.com/cloudera/hue/tree/master/tools/docker
 -[Hive hiveserver2 配置运行](http://blog.csdn.net/wind520/article/details/44084953)
 
 -[Hue问题记录](http://www.ithao123.cn/content-1389854.html)
+
+[Hue集成的一些问题](http://blog.csdn.net/u014658112/article/details/72751191)
 
 - org.apache.hadoop.security.authorize.AuthorizationException
 

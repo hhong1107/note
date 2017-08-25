@@ -136,6 +136,25 @@ mongodb：写入mongodb库
 - [分布式日志平台--ELKStack实践](http://ucode.blog.51cto.com/10837891/1775157)
 - [ELKstack 中文指南](http://kibana.logstash.es/content/logstash/get-start/hello-world.html)
 - [linux screen 命令详解](http://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)
+- [elasticsearch外网IP无法访问](http://blog.csdn.net/buzaiqq/article/details/67637731)
+- [搜索请求](https://kibana.logstash.es/content/elasticsearch/api/search.html)
+- [官方api文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html)
+- [19.ELK实时日志分析平台之Elasticsearch REST API简介](http://blog.csdn.net/a464057216/article/details/50909215)
+- [kibana使用的lucene查询语法](http://blog.csdn.net/jiao_fuyou/article/details/49662051)
+- -[基于ELK的数据分析实践——满满的干货送给你](http://www.cnblogs.com/xing901022/p/6596182.html)
+- [20.ELK实时日志分析平台之Elasticsearch 查询简介](http://blog.csdn.net/a464057216/article/details/50917500)
+- -[Elasticsearch——Rest API中的常用用法](http://www.cnblogs.com/xing901022/p/5303740.html)
+- http://192.168.3.67:9200/logstash-2017.07.21/_search?pretty&size=10
+- [看所有索引](http://192.168.3.67:9200/_cat/indices?v)
+- [过滤查询以及聚合(Filtering Queries and Aggregations)](http://blog.csdn.net/dm_vincent/article/details/42757519)
+- [ElasticSearch java API - 聚合查询](https://elasticsearch.cn/article/102)
+- [官方java-api文档](https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.1/transport-client.html)
+- [Elasticsearch 5.X下JAVA API使用指南](http://blog.csdn.net/napoay/article/details/53581027)
+- [ElasticSearch Java Api(一) －创建索引](http://blog.csdn.net/napoay/article/details/51707023)
+- [在 Java 应用程序中使用 Elasticsearch](https://www.ibm.com/developerworks/cn/java/j-use-elasticsearch-java-apps/)
+- [Spark搭档Elasticsearch](https://yq.aliyun.com/articles/52440)
+- [spark与elasticsearch整合](http://blog.csdn.net/myproudcodelife/article/details/50985057)
+- [相关教程](http://www.sojson.com/tag_elasticsearch.html)
 
 [ElasticSearch 5学习(2)——Kibana+X-Pack介绍使用（全）]: http://www.cnblogs.com/wxw16/p/6156335.html?utm_source=itdadao&amp;utm_medium=referral
 

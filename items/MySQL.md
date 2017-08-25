@@ -13,6 +13,22 @@
 
 - [MYSQL如何设置大小写敏感](https://zhidao.baidu.com/question/2267340607864742028.html)
 
+- [mysql 如何kill session](http://blog.csdn.net/stevendbaguo/article/details/48159167)
+
+- [mysql使用kill命令解决死锁问题,杀死某条正在执行的sql语句](http://blog.csdn.net/buster2014/article/details/51035768)
+
+- -[MySql DAL中间件总结](http://www.fblinux.com/?p=1060)
+
+- -[MHA高可用](http://www.fblinux.com/?p=1018)
+
+- [数据可视化之Grafana-Table Panel](http://blog.csdn.net/neven7/article/details/50980726)
+
+- -[mysql远程表链接](http://www.cnblogs.com/findumars/p/6272233.html)
+
+- [MySql下视图的创建](http://blog.csdn.net/kingkuang2006/article/details/6981484)
+
+- [mysql view(视图)从0学起，以及实例](http://blog.51yip.com/mysql/1062.html)
+
   ````
   1、linux下mysql安装完后是默认：区分表名的大小写，不区分列名的大小写； 
   2、用root帐号登录后，在/etc/my.cnf 中的[mysqld]后添加添加lower_case_table_names=1，重启MYSQL服务，这时已设置成功：不区分表名的大小写； 
@@ -39,25 +55,31 @@
 
   ​	
 
-  #### 所问题
+  #### 锁问题
 
   ````sql
   show status like '%lock%';
-
-
   show global variables like '%time%' ;
 
-  show engine innodb status;
-  -- 查看线程数据
-  show processlist;
+    show engine innodb status;
 
-  -- 查看是否有锁
-  select * from information_schema.innodb_trx;
+    -- 查看线程数据
 
-  kill 1175;
+    show processlist;
+
+    -- 查看是否有锁
+
+    select * from information_schema.innodb_trx;
+  	kill 1175;
   ````
 
-  ​
+
+  
+
+
+  ````
+
+  
 
 - []()
 
@@ -84,8 +106,7 @@
 
 
 #### Druid连接池配置
-
-````
+  ````
 <!-- 数据库基本信息配置 -->
 		<property name="driverClassName" value="${oracle.driver}" />
 		<property name="url" value="${oracle.url}" />
@@ -133,7 +154,7 @@
 
   ````shell
   java –cp druid-1.0.18.jar com.alibaba.druid.filter.config.ConfigTools 你的密码
-  ````
+````
 
   ​
 

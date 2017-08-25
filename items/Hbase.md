@@ -58,6 +58,7 @@
 - -[hbase总结：hbase client访问的超时时间、重试次数、重试间隔时间的配置](http://blog.csdn.net/jamin_tan007/article/details/50055549)
 - [HBase数据导入的几种操作](http://blog.csdn.net/scgaliguodong123_/article/details/46771929)
 - [HBase 0.96.0 的数据导入: 利用ImportTsv，completebulkload，Import](http://blog.csdn.net/samhacker/article/details/21282243)
+- [HBase scan shell操作详解](http://blog.csdn.net/vaq37942/article/details/54949428)
 - []()
 - []()
 - []()
