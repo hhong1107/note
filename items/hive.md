@@ -37,3 +37,66 @@ http://www.cnblogs.com/viviman/archive/2013/01/29/2881784.html
 - []()
 - []()
 - []()
+
+
+
+
+
+````
+CREATE TABLE hbase_table_1(key int, value1 string, value2 int, value3 int) 
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+"hbase.columns.mapping" = ":key,a:b,a:c,d:e"
+);
+
+CREATE EXTERNAL TABLE settle_current_income(key string, accountId string,incomeDate string,incomeAmount string) 
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping" = "record:accountId,record:incomeDate,record:incomeAmount")
+TBLPROPERTIES("hbase.table.name" = "settle_current_income", "hbase.mapred.output.outputtable" = "settle_current_income");
+
+
+
+CREATE EXTERNAL TABLE trade_recharge(key string, accountId string,orderDate string,rechargeId string) 
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping" = "recharge_info:accountId,recharge_info:orderDate,recharge_info:rechargeId")
+TBLPROPERTIES("hbase.table.name" = "trade_recharge", "hbase.mapred.output.outputtable" = "trade_recharge");
+
+
+
+CREATE TABLE current_income_test (
+
+  d1 float,
+
+  d2 float,
+
+  income_date string,
+
+  d3 string,
+
+  d4 string,
+
+  accountid string,
+
+  key string)
+
+PARTITIONED BY (
+
+  stat_date string)
+
+ROW FORMAT DELIMITED
+
+  FIELDS TERMINATED BY '\t'
+
+STORED AS INPUTFORMAT
+
+  'org.apache.hadoop.mapred.TextInputFormat'
+
+OUTPUTFORMAT
+
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat';
+
+
+  LOAD DATA LOCAL INPATH '/home/hd01/tmp/qingxires_ddb_income_history.tsv' OVERWRITE INTO TABLE current_income_test PARTITION (stat_date='2014-12-05');
+
+````
+
