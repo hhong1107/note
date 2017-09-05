@@ -128,102 +128,70 @@ mongodb：写入mongodb库
 #### 参考网站
 
 - [分布式日志收集之Logstash 笔记（一）](http://blog.csdn.net/u010454030/article/details/49659467)
-
 - [分布式日志收集之Logstash 笔记（二）](http://blog.csdn.net/u010454030/article/details/49680531)
-
 - [logstash快速入门](http://www.2cto.com/os/201411/352015.html)
-
 - [SpringBoot应用之ELK](https://segmentfault.com/a/1190000004416276)
-
 - [logstash使用grok正则解析日志](http://blog.csdn.net/earbao/article/details/49306465) ##
-
 - [Elasticsearch权威指南（中文版）](http://es.xiaoleilu.com/010_Intro/10_Installing_ES.html)
-
 - [分布式日志平台--ELKStack实践](http://ucode.blog.51cto.com/10837891/1775157)
-
 - [ELKstack 中文指南](http://kibana.logstash.es/content/logstash/get-start/hello-world.html)
-
 - [linux screen 命令详解](http://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)
-
 - [elasticsearch外网IP无法访问](http://blog.csdn.net/buzaiqq/article/details/67637731)
-
 - [搜索请求](https://kibana.logstash.es/content/elasticsearch/api/search.html)
-
 - [官方api文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-get.html)
-
 - [19.ELK实时日志分析平台之Elasticsearch REST API简介](http://blog.csdn.net/a464057216/article/details/50909215)
-
 - [kibana使用的lucene查询语法](http://blog.csdn.net/jiao_fuyou/article/details/49662051)
-
 - -[基于ELK的数据分析实践——满满的干货送给你](http://www.cnblogs.com/xing901022/p/6596182.html)
-
 - [20.ELK实时日志分析平台之Elasticsearch 查询简介](http://blog.csdn.net/a464057216/article/details/50917500)
-
 - -[Elasticsearch——Rest API中的常用用法](http://www.cnblogs.com/xing901022/p/5303740.html)
-
 - http://192.168.3.67:9200/logstash-2017.07.21/_search?pretty&size=10
-
 - [看所有索引](http://192.168.3.67:9200/_cat/indices?v)
-
 - [过滤查询以及聚合(Filtering Queries and Aggregations)](http://blog.csdn.net/dm_vincent/article/details/42757519)
-
 - [ElasticSearch java API - 聚合查询](https://elasticsearch.cn/article/102)
-
 - [官方java-api文档](https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.1/transport-client.html)
-
 - [Elasticsearch 5.X下JAVA API使用指南](http://blog.csdn.net/napoay/article/details/53581027)
-
 - [ElasticSearch Java Api(一) －创建索引](http://blog.csdn.net/napoay/article/details/51707023)
-
 - [在 Java 应用程序中使用 Elasticsearch](https://www.ibm.com/developerworks/cn/java/j-use-elasticsearch-java-apps/)
-
 - [Spark搭档Elasticsearch](https://yq.aliyun.com/articles/52440)
-
 - [spark与elasticsearch整合](http://blog.csdn.net/myproudcodelife/article/details/50985057)
-
 - [相关教程](http://www.sojson.com/tag_elasticsearch.html)
   -
-
 - [elasticsearch 深分页问题以及解决方法](http://blog.csdn.net/wild46cat/article/details/64123353)
-
 - [Elasticsearch使用scroll进行分页查询](http://blog.csdn.net/lom9357bye/article/details/64500638)
-
 - [elasticsearch中的mapping简介](http://blog.csdn.net/lvhong84/article/details/23936697)
-
 - [Elasticsearch索引mapping的写入、查看与修改](http://blog.csdn.net/napoay/article/details/52012249)
-
 - -[Elasticsearch——分页查询From&Size VS scroll](http://www.cnblogs.com/xing901022/p/5284902.html)
-
+- []()
+- []()
+- []()
+- []()
+- []()
 - []()
 
-- []()
+### 参考网站-tmp
 
-- []()
+-[elasticsearch基本操作之--使用QueryBuilders进行查询](http://www.cnblogs.com/wenbronk/p/6432990.html)
 
+- [Elasticsearch教程（五） elasticsearch Mapping的创建](http://www.sojson.com/blog/86.html)
+- [Elasticsearch java API (18)Aggregations 聚合 Bucket](http://blog.csdn.net/u012116196/article/details/51790016)
+- [聚合中的重要概念 - Buckets(桶)及Metrics(指标)](http://blog.csdn.net/dm_vincent/article/details/42387161)
+- -[Elasticsearch聚合 之 Terms](http://www.cnblogs.com/xing901022/p/4947436.html)
+- [使用 ElasticSearch Aggregations 进行统计分析](http://blog.csdn.net/zxjiayou1314/article/details/53837719)
+- [Elasticsearch count 查询，Elasticsearch 查询是否存在](http://www.sojson.com/blog/206.html)
+- -[Elasticsearch 统计代码例子](http://www.cnblogs.com/didda/p/5485681.html)
+- [聚合的测试数据](http://blog.csdn.net/dm_vincent/article/details/42407823)
+- [实时搜索引擎Elasticsearch（4）——Aggregations （聚合）API的使用](http://blog.csdn.net/xialei199023/article/details/48298635)
+- [ElasticSearch java API - 聚合查询](https://elasticsearch.cn/article/102)
+- -[elasticsearch基本操作之--使用QueryBuilders进行查询](http://www.cnblogs.com/wenbronk/p/6432990.html)
+- [ElasticSearch 全文检索 termQuery和queryString](http://blog.csdn.net/lishaojun0115/article/details/51837552)
+- -[ElasticSearch的Java Api基本操作入门指南](http://aoyouzi.iteye.com/blog/2116597)
+- -[elasticsearch基本操作之--java基本操作 api](http://www.cnblogs.com/wenbronk/p/6383194.html)
 - []()
-
 - []()
-
 - []()
-
 - []()
-
 - []()
-
 - []()
-
-- []()
-
-- []()
-
-- []()
-
-- []()
-
-- []()
-
-- []()
-
 - []()
 
 [ElasticSearch 5学习(2)——Kibana+X-Pack介绍使用（全）]: http://www.cnblogs.com/wxw16/p/6156335.html?utm_source=itdadao&amp;utm_medium=referral

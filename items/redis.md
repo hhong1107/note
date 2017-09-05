@@ -150,6 +150,8 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 - [Spring Boot使用redis做数据缓存](http://wiselyman.iteye.com/blog/2184884)
 - [SpringBoot之redis](http://my.oschina.net/wangnian/blog/661389)
 - [](http://jinnianshilongnian.iteye.com/blog/2001040)
+- -[Spring RedisTemplate操作-List操作（4）](http://www.cnblogs.com/aoeiuv/p/6760742.html)
+- [SpringBoot中Redis的set、map、list、value、实体类等基本操作介绍](http://blog.csdn.net/linzhiqiang0316/article/details/52711908)
 - []()
 - []()
 - []()
