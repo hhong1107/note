@@ -81,6 +81,47 @@ https://github.com/cloudera/hue/tree/master/tools/docker
 
 [Hue集成的一些问题](http://blog.csdn.net/u014658112/article/details/72751191)
 
+-[hadoop 权限错误 Permission denied: user=root, access=WRITE, inode="/":hdfs:super](http://www.cnblogs.com/daiyutage/p/5155830.html)
+
+[User root is not allowed to impersonate anonymous](http://blog.csdn.net/fz1989/article/details/51489498)
+
+[hadoop2.4.1 安装hue with Yarn模式](http://blog.csdn.net/zhoujj303030/article/details/44832363)
+
+-[Hadoop2.3+Hive0.12集群部署](http://www.cnblogs.com/Scott007/p/3614960.html)
+
+
+
+
+
+
+
+
+
+​	
+
+
+
+```
+Hive中的日志分为两种
+1. 系统日志，记录了hive的运行情况，错误状况。
+2. Job 日志，记录了Hive 中job的执行的历史过程。
+
+系统日志存储在
+在hive/conf/ hive-log4j.properties 文件中记录了Hive日志的存储情况，
+默认的存储情况：
+hive.root.logger=WARN,DRFA
+hive.log.dir=/tmp/${user.name} # 默认的存储位置
+hive.log.file=hive.log  # 默认的文件名
+
+Job日志存储在：
+
+//Location of Hive run time structured log file
+    HIVEHISTORYFILELOC("hive.querylog.location", "/tmp/" + System.getProperty("user.name")),
+默认存储与 /tmp/{user.name}目录下。
+```
+
+​	
+
 - org.apache.hadoop.security.authorize.AuthorizationException
 
 主要是hadoop权限的问题 修改  /home/hd01/opt/hadoop-2.7.1/etc/hadoop/core-site.xml 加入

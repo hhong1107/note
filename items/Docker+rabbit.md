@@ -25,6 +25,49 @@
 - [ Docker 容器日志的那些事儿](http://blog.csdn.net/shlazww/article/details/47283617)
 
 
-
   [在 Docker 中使用 Java Spring Boot 框架](http://docs.daocloud.io/java-docker/docker-java-spring-boot)
   [蓝绿发布](http://leaver.me/2014/09/14/蓝绿发布的整个部署过程/)
+
+
+
+
+
+### 单独安装
+
+````
+rpm -ivh erlang-19.0.4-1.el7.centos.x86_64.rpm
+rpm -ivh rabbitmq-server-3.6.6-1.el7.noarch.rpm 
+# 如果报没有装 socat
+yum install socat
+
+/sbin/service rabbitmq-server stop #关闭
+
+/sbin/service rabbitmq-server start #启动
+
+/sbin/service rabbitmq-server status #状态
+
+./rabbitmq-plugins list
+
+./rabbitmqctl status
+
+./rabbitmq-plugins enable rabbitmq_management # 装管理台插件
+
+# 默认guest 用户是不能远程登录的
+rabbitmqctl add_user test 123456
+rabbitmqctl  set_user_tags  test  administrator
+rabbitmqctl set_permissions -p "/" test ".*" ".*" ".*"
+````
+
+
+
+[CentOS7 安装RabbitMQ](http://www.cnblogs.com/liaojie970/p/6138278.html) 安装参考网站
+
+[RabbitMQ：安装、配置与使用初探](http://blog.csdn.net/sharetop/article/details/49716897)
+
+[官网地址](http://www.rabbitmq.com/which-erlang.html)
+
+-[rabbitmq的web管理界面无法使用guest用户登录](http://www.cnblogs.com/mingaixin/p/4134920.html)
+
+[安装启动rabbitmq并配置远程访问web管理界面](http://blog.csdn.net/ownfire/article/details/51335072)
+
+[设置RabbitMQ远程ip登录](http://www.jianshu.com/p/e3af4cf97820) 用户设置可参考
