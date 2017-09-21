@@ -296,6 +296,45 @@ unzip file.zip //解压zip
 
 
 
+###### htop
+
+安装：
+
+````shell
+# ubuntu
+sudo apt-get install htop
+
+# centos 7
+## 首先启用 EPEL Repository:
+yum -y install epel-release
+## 启用 EPEL Repository 後, 可以用 yum 直接安裝 Htop:
+yum -y install htop
+````
+
+
+
+Shortcut Key	Function Key	Description	中文说明
+h, ?	F1	Invoke htop Help	查看htop使用说明
+S	F2	Htop Setup Menu	htop 设定
+/	F3	Search for a Process	搜索进程
+\	F4	Incremental process filtering	增量进程过滤器
+t	F5	Tree View	显示树形结构
+<, >	F6	Sort by a column	选择排序方式
+[	F7	Nice - (change priority)	可减少nice值，这样就可以提高对应进程的优先级
+]	F8	Nice + (change priority)	可增加nice值，这样就可以降低对应进程的优先级
+k	F9	Kill a Process	可对进程传递信号
+q	F10	Quit htop	结束htop
+
+
+
+
+
+-[centos6.5-64bit安装htop](http://www.cnblogs.com/liyou-blog/p/5741829.html)
+
+-[为什么 Linux 的 htop 命令完胜 top 命令](https://linux.cn/article-3141-1.html)
+
+-[Linux下取代top的进程管理工具 htop](http://www.cnblogs.com/mchina/archive/2013/03/15/2858041.html)
+
 
 
 
@@ -350,6 +389,12 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 - [CentOS 7.0关闭默认防火墙启用iptables防火墙](http://www.linuxidc.com/Linux/2015-05/117473.htm)
 
 - [[GPG key retrieval failed: [Errno 14\] curl#37 - "Couldn't open file /etc/pki/rpm-gpg/RPM-GPG-KEY-Cent](http://blog.csdn.net/moolight_shadow/article/details/45749065)](http://blog.csdn.net/moolight_shadow/article/details/45749065)centos7更新完源之后安装软件会出现这个错误
+
+- [在 Linux 下用 mkdir 命令来创建目录和子目录](https://linux.cn/article-2713-1.html)
+
+- -[linux查看和修改PATH环境变量的方法](http://www.cnblogs.com/hust-chenming/p/4943268.html)
+
+- -[Linux中使用export命令设置环境变量](http://www.cnblogs.com/isoftware/p/3778028.html)
 
 - ​
 

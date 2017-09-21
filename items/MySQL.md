@@ -29,6 +29,10 @@
 
 - [mysql view(视图)从0学起，以及实例](http://blog.51yip.com/mysql/1062.html)
 
+- -[关于MySql链接url参数的设置](http://www.cnblogs.com/softidea/p/5765624.html)
+
+- ​
+
   ````
   1、linux下mysql安装完后是默认：区分表名的大小写，不区分列名的大小写； 
   2、用root帐号登录后，在/etc/my.cnf 中的[mysqld]后添加添加lower_case_table_names=1，重启MYSQL服务，这时已设置成功：不区分表名的大小写； 

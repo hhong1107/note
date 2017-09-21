@@ -35,6 +35,7 @@
 - [Hadoop 2.0 HA高可用集群配置详解](http://blog.csdn.net/carl810224/article/details/52160418)
 - [hadoop命令 -- job相关](http://blog.csdn.net/lxpbs8851/article/details/12969105)
 - -[【hadoop】 running beyond virtual memory错误原因及解决办法](http://blog.csdn.net/AHAU10/article/details/53484770)
+- -[hadoop HDFS常用文件操作命令](https://segmentfault.com/a/1190000002672666) 很多文件相关的命令
 - []()
 - []()
 - []()

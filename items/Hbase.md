@@ -106,7 +106,7 @@ hadoop dfsadmin -safemode leave
 - [深入HBase架构解析（一）](http://www.blogjava.net/DLevin/archive/2015/08/22/426877.html)
 - [HBase 默认配置](http://eclecl1314-163-com.iteye.com/blog/1474286)
 - [hbase教程](http://www.yiibai.com/hbase/hbase_describe_and_alter.html)
-- ​
+- ​[Hbase 数据导出到文件中](http://blog.csdn.net/maixia24/article/details/38414565) 直接用命令导出的
 
 ### 异常处理
 
@@ -331,7 +331,54 @@ hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=testfm:inc
 
 
 
+#### Hbase数据迁移
 
+[Hbase集群间数据迁移方法总结（包括不通信集群）](http://blog.csdn.net/bigkeen/article/details/51034902) 部分参考这个  不过add_table.rb脚本那里不需要采用 直接执行下面的 hbase hbck .. 那个命令就行
+
+[Hbase集群间数据迁移方法总结](http://blog.csdn.net/jingling_zy/article/details/7554676)
+
+
+
+[解决方案：hbase数据迁移发生ERROR: Unknown table错误](http://www.voidcn.com/article/p-tdnmjldo-baa.html) 这篇文章非常有参考价值  并且提到了 使用 get put 直接导出导入
+
+- 本次实行的是离线迁移
+
+````shell
+
+# hadoop导出到本地的文件
+hadoop fs -copyToLocal /hbase/data/default/account ./hbase-backup/account
+# 将本地文件导入hadoop
+hadoop fs -copyFromLocal  ./settle_current_income    /hbase/data/default/settle_current_income
+
+# 先修复.META.表：
+hbase hbck -fixMeta
+# 重新分区
+hbase hbck -fixAssignments
+
+http://www.voidcn.com/article/p-tdnmjldo-baa.html
+
+````
+
+
+
+另外还有一种导出导入方法：
+
+````shell
+hadoop dfs -get /hbase/test ./
+hadoop dfs -put test /hbase/test
+````
+
+
+
+
+
+
+
+
+
+```
+
+```
 
 
 

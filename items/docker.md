@@ -112,7 +112,7 @@ http://www.server110.com/docker/201411/11105.html
 
 -[docker 1.12.3版本搭建私有仓库，上传镜像报错：server gave HTTP response to HTTPS client”](https://www.bbsmax.com/A/A7zg22MVd4/)
 
-
+[使用docker运行mysql实例](http://www.jianshu.com/p/c24e3e5f5b58)
 
 
 
