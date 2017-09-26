@@ -356,7 +356,6 @@ hbase hbck -fixMeta
 hbase hbck -fixAssignments
 
 http://www.voidcn.com/article/p-tdnmjldo-baa.html
-
 ````
 
 

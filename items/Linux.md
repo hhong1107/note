@@ -27,6 +27,28 @@ screen -ls列出当前挂起的screen
 
 
 
+###### 修改时区
+
+-[我使用过的Linux命令之tzselect - 选择时区](http://codingstandards.iteye.com/blog/834280)
+
+````shell
+tzselect    
+
+# 选1 5 9 1
+# 系统提示 You can make this change permanent for yourself by appending the line
+#	TZ='Asia/Shanghai'; export TZ
+# to the file '.profile' in your home directory; then log out and log in again
+
+export TZ='Asia/Shanghai'
+
+````
+
+
+
+
+
+
+
 ###### 其他命令
 
 - 显示版本信息：cat /etc/issue  或  name-a

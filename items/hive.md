@@ -41,6 +41,22 @@ http://www.cnblogs.com/viviman/archive/2013/01/29/2881784.html
 
 
 
+####  问题
+
+- 报 hadoop执行时指向的是一个错误的jdk  在hadoop-env.sh 中加入JAVA_HOME 可以了
+
+
+
+#### 初始化mysql表
+
+````shel
+./schematool -dbType mysql -initSchema
+````
+
+
+
+
+
 
 ````
 CREATE TABLE hbase_table_1(key int, value1 string, value2 int, value3 int) 
@@ -49,7 +65,7 @@ WITH SERDEPROPERTIES (
 "hbase.columns.mapping" = ":key,a:b,a:c,d:e"
 );
 
-CREATE EXTERNAL TABLE settle_current_income(key string, accountId string,incomeDate string,incomeAmount string) 
+CREATE EXTERNAL TABLE settle_current_income_test(key string, accountId string,incomeDate string,incomeAmount string) 
 STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
 WITH SERDEPROPERTIES ("hbase.columns.mapping" = "record:accountId,record:incomeDate,record:incomeAmount")
 TBLPROPERTIES("hbase.table.name" = "settle_current_income", "hbase.mapred.output.outputtable" = "settle_current_income");
@@ -97,6 +113,5 @@ OUTPUTFORMAT
 
 
   LOAD DATA LOCAL INPATH '/home/hd01/tmp/qingxires_ddb_income_history.tsv' OVERWRITE INTO TABLE current_income_test PARTITION (stat_date='2014-12-05');
-
 ````
 
