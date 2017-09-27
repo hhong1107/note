@@ -123,3 +123,4 @@
 - [springcloud(第四篇)springcloud hystrix](http://blog.csdn.net/liaokailin/article/details/51339357)
 - [使用Hystrix守护应用](http://ningandjiao.iteye.com/blog/2171849)
 - [Hystrix 使用与分析](http://hot66hot.iteye.com/blog/2155036)
+- [微服务中一个监控Spring Boot的神器](http://mp.weixin.qq.com/s?__biz=MzA5MzQ2NTY0OA==&mid=2650796673&idx=1&sn=fedb8cc30c8cd621d42e67393d9eb326&chksm=88562fdebf21a6c8f4f790ca1dc9f311a1d929d85d49471d6962fb2548793582b1c79a87a96a&mpshare=1&scene=1&srcid=0325xyyAqBGK0XyhxwIff9T3#rd)

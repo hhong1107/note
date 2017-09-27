@@ -31,6 +31,8 @@
 
 - -[关于MySql链接url参数的设置](http://www.cnblogs.com/softidea/p/5765624.html)
 
+- ​[docker - mysql - utf8 中文编码问题](http://blog.csdn.net/m0_37639542/article/details/72852875)
+
 - ​
 
   ````

@@ -61,16 +61,28 @@ http://www.server110.com/docker/201411/11105.html
 
 #### 参考网站
 - [在Docker容器中运行Spring Boot应用](https://www.tianmaying.com/tutorial/spring-boot-docker)
+
 - [技术讨论：微服务和容器比虚拟机快多少？](http://dockone.io/article/1674)
+
 - [微服务架构下应用docker化实践](http://7xi8kv.com5.z0.glb.qiniucdn.com/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E4%B8%8B%E5%BA%94%E7%94%A8docker%E5%8C%96%E5%AE%9E%E8%B7%B5.pdf)
+
 - [再谈Docker-微服务的场景化应用](http://www.jianshu.com/p/9805545db4ad)
+
 - [微服务革命：容器化的应用、数据及其它一切](http://www.infoq.com/cn/articles/microservices-revolution)
+
 - [肖德时：如何用Docker来管理微服务架构的乱网](http://www.infoq.com/cn/articles/docker-microservice-architect)
+
 - [如何优雅地停止运行中的内嵌Tomcat的Spring Boot应用](http://jaskey.github.io/blog/2016/04/05/shutdown-spring-boot-application-gracefully/)
+
 - [使用Weave实现Docker多宿主机互联](http://www.tuicool.com/articles/YJF7ben)
+
 - [Docker监控及日志采集神器](https://segmentfault.com/a/1190000007595832)
+
 - [Docker本地仓库简单使用一些例子](http://www.111cn.net/sys/linux/118539.htm)
+
 - [官方安装指南](https://store.docker.com/editions/community/docker-ce-server-centos) 按照这个就能使用
+
+  [docker容器中安装vim](http://blog.csdn.net/achilles12345/article/details/47122963)其他软件安装也可以参考啊
 ##### 教程类
 - [教程](http://www.runoob.com/docker/docker-command-manual.html)
 - [Docker实战-书籍](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1?fr=aladdin&key=docker教程&f=read###)

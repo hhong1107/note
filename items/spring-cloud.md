@@ -32,7 +32,7 @@
 - [springcloud(第三篇)springcloud eureka 服务注册与发现](http://blog.csdn.net/liaokailin/article/details/51314001)
 - [Spring-cloud & Netflix 源码解析：Eureka 服务注册发现接口](http://www.tuicool.com/articles/yuyeqaj)
 - [使用Spring Cloud Feign作为HTTP客户端调用远程HTTP服务](http://blog.csdn.net/neosmith/article/details/52449921)
-- -[zuul超时及重试配置](https://segmentfault.com/a/1190000007290888)
+- ​
 - []()
 - []()
 - []()
@@ -41,3 +41,11 @@
 - []()
 - []()
 - []()
+
+
+
+#### 服务注册中心:
+
+[spring cloud 学习笔记-Eureka](http://blog.csdn.net/zzp448561636/article/details/70198878)  这篇很有参考价值
+
+[zuul超时及重试配置](https://segmentfault.com/a/1190000007290888)
