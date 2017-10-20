@@ -133,13 +133,25 @@ spring:
 #### 参考网站
 
 - [spring官网](http://start.spring.io/)
+
 - [SpringBoot文档-英文](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/?cm_mc_uid=14358288081314078496117&cm_mc_sid_50200000=1465543344)
+
 - [SpringBoot文档](https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/content/)
+
 - [SpringBoot相关的简书](http://www.jianshu.com/collection/f0cf6eae1754)
+
 - [SpringBoot和Mybatis整合](http://www.jianshu.com/p/5ef281100bb6#)
+
 - [Running Dubbo On Spring Boot](http://www.jianshu.com/p/ed466de44967)
+
 - [深入学习微框架：Spring Boot](http://www.infoq.com/cn/articles/microframeworks1-spring-boot)
+
 - [使用 Spring Boot 快速构建 Spring 框架应用](https://www.ibm.com/developerworks/cn/java/j-lo-spring-boot/)
+
 - [文档翻译-git](https://github.com/qibaoguang/Spring-Boot-Reference-Guide/blob/master/SUMMARY.md#summary)
+
 - [使用Spring Boot创建微服务](http://www.infoq.com/cn/articles/boot-microservices)
+
 - [Spring Boot中使用@Async实现异步调用](http://blog.didispace.com/springbootasync/)
+
+  [SpringBoot应用服务启动与安全终止](http://blog.csdn.net/wangshuang1631/article/details/62054798)

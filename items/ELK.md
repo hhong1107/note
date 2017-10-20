@@ -161,6 +161,7 @@ mongodb：写入mongodb库
 - [elasticsearch中的mapping简介](http://blog.csdn.net/lvhong84/article/details/23936697)
 - [Elasticsearch索引mapping的写入、查看与修改](http://blog.csdn.net/napoay/article/details/52012249)
 - -[Elasticsearch——分页查询From&Size VS scroll](http://www.cnblogs.com/xing901022/p/5284902.html)
+- -[Elasticsearch基本概念及核心配置文件详解](http://www.cnblogs.com/xiaochina/p/6855591.html)
 - []()
 - []()
 - []()

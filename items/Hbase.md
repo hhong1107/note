@@ -59,6 +59,10 @@
 - [HBase数据导入的几种操作](http://blog.csdn.net/scgaliguodong123_/article/details/46771929)
 - [HBase 0.96.0 的数据导入: 利用ImportTsv，completebulkload，Import](http://blog.csdn.net/samhacker/article/details/21282243)
 - [HBase scan shell操作详解](http://blog.csdn.net/vaq37942/article/details/54949428)
+
+
+-[Hadoop,HBase添加和删除节点](http://blog.csdn.net/long1657/article/details/39526025)
+
 - []()
 - []()
 - []()

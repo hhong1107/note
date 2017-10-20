@@ -357,7 +357,7 @@ q	F10	Quit htop	结束htop
 
 -[Linux下取代top的进程管理工具 htop](http://www.cnblogs.com/mchina/archive/2013/03/15/2858041.html)
 
-
+[htop使用备忘](http://www.cppblog.com/aurain/archive/2014/11/20/208928.html)
 
 
 
@@ -418,6 +418,6 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 - -[Linux中使用export命令设置环境变量](http://www.cnblogs.com/isoftware/p/3778028.html)
 
-- ​
+- [linux下的top命令参数说明 （virt,res,shr,data 的意义）](http://blog.csdn.net/liuxingjiaofu/article/details/8237967)
 
   ​
