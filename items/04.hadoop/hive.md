@@ -26,6 +26,7 @@ http://www.cnblogs.com/viviman/archive/2013/01/29/2881784.html
 - [使用 Hive 构建数据仓库](http://www.ibm.com/developerworks/cn/data/library/bd-hivewarehouse/)
 - [基于Hadoop的数据仓库Hive 学习指南](http://blog.csdn.net/achuo/article/details/51332214)
 - [Hive定义、Hive与HBase关系、Hive与RDBMS的关系、数据库与数据仓库的区别](http://blog.csdn.net/u012110719/article/details/48690189)
+- -[Hive性能优化](http://www.cnblogs.com/smartloli/p/4356660.html)
 - []()
 - []()
 - []()
@@ -113,5 +114,29 @@ OUTPUTFORMAT
 
 
   LOAD DATA LOCAL INPATH '/home/hd01/tmp/qingxires_ddb_income_history.tsv' OVERWRITE INTO TABLE current_income_test PARTITION (stat_date='2014-12-05');
+````
+
+
+
+#### hiveserver2 内存不足问题
+
+问题描述：hive内部命令可以，但是通过hue 调用的时候  hiveserver2就会报内存不足
+
+解决：
+
+- 注意日志打印 把  hive-log4j2.properties.template 拷贝成   hive-log4j2.properties。修改其中的 property.hive.log.dir 或 property.hive.log.level
+- 把 hive-env.sh.template 拷贝成 hive-env.sh  修改如下配置
+
+````shell
+if [ "$SERVICE" = "cli" ]; then
+   if [ -z "$DEBUG" ]; then
+     export HADOOP_OPTS="$HADOOP_OPTS -XX:NewRatio=12 -Xms10m -XX:MaxHeapFreeRatio=40 -XX:MinHeapFreeRatio=15 -XX:+UseParNewGC -XX:-UseGCOverheadLimit -XX:PermSize=256M -XX:MaxPermSize=512M -Xmx2048m"
+   else
+     export HADOOP_OPTS="$HADOOP_OPTS -XX:NewRatio=12 -Xms10m -XX:MaxHeapFreeRatio=40 -XX:MinHeapFreeRatio=15 -XX:-UseGCOverheadLimit -XX:PermSize=256M -XX:MaxPermSize=512M -Xmx2048m"
+   fi
+ fi
+ 
+# 因为if判断好像没进去 直接在下面写
+export HADOOP_OPTS="$HADOOP_OPTS -XX:NewRatio=12 -Xms10m -XX:MaxHeapFreeRatio=40 -XX:MinHeapFreeRatio=15 -XX:-UseGCOverheadLimit -XX:PermSize=256M -XX:MaxPermSize=512M -Xmx2048m"
 ````
 

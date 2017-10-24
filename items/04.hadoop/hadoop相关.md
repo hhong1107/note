@@ -38,6 +38,7 @@
 - -[hadoop HDFS常用文件操作命令](https://segmentfault.com/a/1190000002672666) 很多文件相关的命令
 - [Hadoop/Yarn/MapReduce内存分配（配置）方案](http://blog.csdn.net/bluishglc/article/details/42436321)  参考这个配置
 - [Hadoop教程](http://www.yiibai.com/hadoop/hadoop_enviornment_setup.html#article-start)
+- -[bigdata_hadoop集群配置_内存分配](http://www.cnblogs.com/cphmvp/p/6055353.html)
 - []()
 - []()
 - []()
