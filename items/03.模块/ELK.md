@@ -162,7 +162,7 @@ mongodb：写入mongodb库
 - [Elasticsearch索引mapping的写入、查看与修改](http://blog.csdn.net/napoay/article/details/52012249)
 - -[Elasticsearch——分页查询From&Size VS scroll](http://www.cnblogs.com/xing901022/p/5284902.html)
 - -[Elasticsearch基本概念及核心配置文件详解](http://www.cnblogs.com/xiaochina/p/6855591.html)
-- []()
+- [github上到书籍](https://github.com/looly/elasticsearch-definitive-guide-cn)
 - []()
 - []()
 - []()
@@ -195,7 +195,7 @@ mongodb：写入mongodb库
 - []()
 - []()
 
-[ElasticSearch 5学习(2)——Kibana+X-Pack介绍使用（全）]: http://www.cnblogs.com/wxw16/p/6156335.html?utm_source=itdadao&amp;utm_medium=referral
+[ElasticSearch 5学习(2)——Kibana+X-Pack介绍使用（全）]: http://www.cnblogs.com/wxw16/p/6156335.html?utm_source=itdadao&amp;amp;utm_medium=referral
 
 
 
