@@ -1,9 +1,12 @@
-- source .bashrc 报错 command not found: shopt
 
-  ​是因为使用了zsh 所以 要 source ~/.zshrc
 
-- zip解压 unzip
 
+
+#### 问题
+
+##### source .bashrc 报错 command not found: shopt
+
+是因为使用了zsh 所以 要 source ~/.zshrc
 
 
 
@@ -117,6 +120,8 @@ export TZ='Asia/Shanghai'
 
   home windows：echo java_home
   linux：echo $JAVA_HOME
+
+- zip解压 unzip
 
 - 压缩解压缩+密码
 
@@ -419,5 +424,9 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 - -[Linux中使用export命令设置环境变量](http://www.cnblogs.com/isoftware/p/3778028.html)
 
 - [linux下的top命令参数说明 （virt,res,shr,data 的意义）](http://blog.csdn.net/liuxingjiaofu/article/details/8237967)
+
+- -[linux下的缓存机制及清理buffer/cache/swap的方法梳理](http://www.cnblogs.com/kevingrace/p/5991604.html)
+
+- ​
 
   ​

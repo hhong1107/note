@@ -120,6 +120,8 @@ OUTPUTFORMAT
 
 #### hiveserver2 内存不足问题
 
+
+
 问题描述：hive内部命令可以，但是通过hue 调用的时候  hiveserver2就会报内存不足
 
 解决：
@@ -140,3 +142,4 @@ if [ "$SERVICE" = "cli" ]; then
 export HADOOP_OPTS="$HADOOP_OPTS -XX:NewRatio=12 -Xms10m -XX:MaxHeapFreeRatio=40 -XX:MinHeapFreeRatio=15 -XX:-UseGCOverheadLimit -XX:PermSize=256M -XX:MaxPermSize=512M -Xmx2048m"
 ````
 
+http://blog.csdn.net/levy_cui/article/details/53992402
