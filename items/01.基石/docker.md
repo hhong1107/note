@@ -358,3 +358,35 @@ docker run -idt --net=host -v /tmp/ddsc-log:/logs -v /.keys:/.keys  -p 8118:8118
 docker build -t ddsc.dock.registry:5000/ddsc-pay:1.0.0  .
 ````
 
+
+
+
+
+#### 搭建MySQL
+
+````shell
+# 拉取镜像
+sudo docker pull hub.c.163.com/library/mysql:latest
+sudo docker run --name ddsc-hue -p 3306:3306 -e MYSQL\_ROOT\_PASSWORD=ddsc2017  
+
+# 开去federated  引擎 才可以使用远程连接表结构
+
+cd /etc/mysql/conf.d
+# 在这个文件下面追加  federated 然后重启即可
+vim docker.cnf
+
+
+
+````
+
+
+
+#### 安装软件
+
+http://blog.csdn.net/achilles12345/article/details/47122963
+
+````shell
+apt-get update
+apt-get install vim 
+````
+

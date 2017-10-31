@@ -63,11 +63,19 @@
 
 -[hbase操作（shell 命令，如建表，清空表，增删改查）以及 hbase表存储结构和原理](http://blog.csdn.net/longshenlmj/article/details/48317567)
 
+[Hbase教程](http://www.yiibai.com/hbase/hbase_delete_data.html)
+
+
+
 #### 数据迁移相关
 
 - [hadoop和hbase节点添加和单独重启](http://blog.csdn.net/xiaolang85/article/details/7987990)
+
 - [数据导入HBase最常用的三种方式及实践分析](http://www.csdn.net/article/2014-01-07/2818046)
+
 - [HBase数据迁移（3）-自己编写MapReduce Job导入数据](http://www.importnew.com/3912.html)
+
+  [hbase备份以及导出问题](http://www.aboutyun.com/thread-12742-1-1.html)
 
 
 #### 异常处理
@@ -394,7 +402,9 @@ hadoop dfs -put test /hbase/test
 
 
 
+[HDFS和HBASE动态增加和减少节点](http://blog.csdn.net/clark_xu/article/details/69666612)
 
+[]
 
 
 

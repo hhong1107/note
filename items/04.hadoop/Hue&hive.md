@@ -189,3 +189,58 @@ https://community.hortonworks.com/questions/38116/hive-query-failing-with-orgapa
   </property>
 ````
 
+
+
+
+
+
+
+[安装Hue后的一些功能的问题和解决](http://blog.csdn.net/eason_oracle/article/details/52191897)      点击“File Browser”报错：这里是直接设置为 *的
+
+
+
+
+
+
+
+
+
+### 问题
+
+
+
+##### mysql中文乱码
+
+-[MYSQL连接字符串参数详细解析（大全参考）](http://www.cnblogs.com/micro-chen/p/5755774.html)
+
+其实关键就是在mysql 连接的时候传入参数
+
+````shell
+    [[[mysql0]]]
+       nice_name="xuwei2"
+       encoding=utf8
+       #name=test
+       engine=mysql
+       host=192.168.3.194
+       port=3306
+       user=root
+       password=ddsc2017
+       # schema=ddsc_asset
+       # characterEncoding=utf8
+       # useUnicode=true
+       options='{"charset":"utf8"}'
+````
+
+
+
+
+
+##### docker中启动和配置
+
+
+
+````shell
+root@0d6c2379ca20:/hue# ./build/env/bin/hue runserver_plus 0.0.0.0:8888
+root@0d6c2379ca20:/hue# vim desktop/conf/pseudo-distributed.ini
+````
+

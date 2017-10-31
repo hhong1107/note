@@ -402,31 +402,20 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 
 - xxx is not in the sudoers file.This incident will be reported.的解决方法
-
 - [linux screen 命令详解](http://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)
-
 - [ifconfig配置网络时，出现“SIOCSIFADDR: No such device”和“eth0:ERROR while getting interface flags:No such dev”](http://blog.csdn.net/sirenxiaohuayuan/article/details/50762358)
-
 - [ubuntu14.04设置静态ip](http://www.cnblogs.com/vincedotnet/p/4013099.html)
-
 - [CentOS yum 源的配置与使用](http://www.cnblogs.com/mchina/archive/2013/01/04/2842275.html)
-
 - [超简单将Centos的yum源更换为国内的阿里云源](http://blog.csdn.net/chavo0/article/details/51939362)
-
 - [CentOS 7.0关闭默认防火墙启用iptables防火墙](http://www.linuxidc.com/Linux/2015-05/117473.htm)
-
 - [[GPG key retrieval failed: [Errno 14\] curl#37 - "Couldn't open file /etc/pki/rpm-gpg/RPM-GPG-KEY-Cent](http://blog.csdn.net/moolight_shadow/article/details/45749065)](http://blog.csdn.net/moolight_shadow/article/details/45749065)centos7更新完源之后安装软件会出现这个错误
-
 - [在 Linux 下用 mkdir 命令来创建目录和子目录](https://linux.cn/article-2713-1.html)
-
 - -[linux查看和修改PATH环境变量的方法](http://www.cnblogs.com/hust-chenming/p/4943268.html)
-
 - -[Linux中使用export命令设置环境变量](http://www.cnblogs.com/isoftware/p/3778028.html)
-
 - [linux下的top命令参数说明 （virt,res,shr,data 的意义）](http://blog.csdn.net/liuxingjiaofu/article/details/8237967)
-
 - -[linux下的缓存机制及清理buffer/cache/swap的方法梳理](http://www.cnblogs.com/kevingrace/p/5991604.html)
-
 - [手动释放linux内存cache](https://linux.cn/article-211-1.html)
+- ​
 
-  ​
+[Linux命令大全](http://man.linuxde.net/par/3)
+

@@ -169,9 +169,11 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 - [redis教程](http://www.yiibai.com/redis/redis_configuration.html)
 - [ Docker实践(五)：镜像的概念、管理(查看、下载、删除)](http://blog.csdn.net/u010246789/article/details/54091343)
 - [docker镜像详解 docker命令详解](http://blog.csdn.net/u010098331/article/details/53485539)
-- []()
+- [redis的两种备份方式](http://blog.csdn.net/subuser/article/details/8157178)
 - []()
 
-#### 命令
+
+
+### 命令
 
 清空缓存：./redis-cli KEYS "*" | xargs ./redis-cli DEL
