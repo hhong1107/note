@@ -221,6 +221,11 @@ docker run -idt --net=host -v /home/fincar/tmp/log2:/tmp/log -p 2007:2007 --name
 docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9003:9003 --name='fincar-common-test-db'   fincar-common-test:test-log  '--server.port=9003'  '--spring.cloud.config.profile=test-db4wang' '--spring.application.name=fincar-common-testdb4wang' '/logs/nohup.log 2>&1 &'
 ````
 
+````shell
+# 利用命令查看容器的详细信息
+docker inspect 44ab452b4(镜像id)
+````
+
 
 
 

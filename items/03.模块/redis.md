@@ -164,8 +164,11 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 - [文档比较详细]([[http://www.redis.cn/documentation.html]])
 - [简单教程](http://www.runoob.com/redis/redis-commands.html)
 - [极客学院的教程](http://wiki.jikexueyuan.com/project/all-about-redis/DataStructure/key/expire.html)
-- []()
-- []()
+- [老司机的 redis 数据迁移笔记](https://yq.aliyun.com/articles/62511)
+- -[redis数据迁移](http://www.cnblogs.com/hygs/p/6826202.html)
+- [redis教程](http://www.yiibai.com/redis/redis_configuration.html)
+- [ Docker实践(五)：镜像的概念、管理(查看、下载、删除)](http://blog.csdn.net/u010246789/article/details/54091343)
+- [docker镜像详解 docker命令详解](http://blog.csdn.net/u010098331/article/details/53485539)
 - []()
 - []()
 

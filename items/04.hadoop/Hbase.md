@@ -12,6 +12,8 @@
 
 ### 参考网站
 
+#### 安装
+
 - [Hadoop+HBase+ZooKeeper三者关系与安装配置](http://edu.dataguru.cn/thread-241488-1-1.html) 主要参考这个网站的示例
 - [HA 模式下的 Hadoop+ZooKeeper+HBase 启动顺序](http://blog.csdn.net/u011414200/article/details/50437356)
 - [hbase+zookeeper集群搭建](http://blog.csdn.net/lxf310/article/details/17263337)
@@ -23,6 +25,12 @@
 - [hbase安装配置（整合到hadoop）](http://blog.csdn.net/hguisu/article/details/7244413)
 - [手把手教你配置Hbase完全分布式环境](https://my.oschina.net/lanzp/blog/348116)
 - [Hadoop安装教程_单机/伪分布式配置_Hadoop2.6.0/Ubuntu14.04](http://www.powerxing.com/install-hadoop/)
+
+
+
+
+#### 攻略
+
 - [HBase的特征和优点](http://www.thebigdata.cn/HBase/13396.html)
 - [HBase在腾讯大数据的应用实践](http://www.thebigdata.cn/HBase/14270.html)
 - [HBase与Zookeeper数据结构查询](http://www.thebigdata.cn/HBase/13255.html)
@@ -51,9 +59,19 @@
 - [HBase高性能复杂条件查询引擎](http://blog.csdn.net/bluishglc/article/details/31799255)
 - [hbase高性能读取数据](http://blog.csdn.net/zbc1090549839/article/details/50487336)
 - [Hbase 统计表行数的3种方式总结](http://blog.csdn.net/u013709332/article/details/52296748)
+
+
+-[hbase操作（shell 命令，如建表，清空表，增删改查）以及 hbase表存储结构和原理](http://blog.csdn.net/longshenlmj/article/details/48317567)
+
+#### 数据迁移相关
+
 - [hadoop和hbase节点添加和单独重启](http://blog.csdn.net/xiaolang85/article/details/7987990)
 - [数据导入HBase最常用的三种方式及实践分析](http://www.csdn.net/article/2014-01-07/2818046)
 - [HBase数据迁移（3）-自己编写MapReduce Job导入数据](http://www.importnew.com/3912.html)
+
+
+#### 异常处理
+
 - [Hbase 建表基本命令总结](http://blog.csdn.net/kky2010_110/article/details/12616137)
 - -[hbase总结：hbase client访问的超时时间、重试次数、重试间隔时间的配置](http://blog.csdn.net/jamin_tan007/article/details/50055549)
 - [HBase数据导入的几种操作](http://blog.csdn.net/scgaliguodong123_/article/details/46771929)
@@ -311,6 +329,7 @@ hadoop fs -ls /
 #### Hbase相关
 
 - [从hdfs批量导数据到hbase](http://blog.csdn.net/pighead_chen/article/details/8677699)
+- ​
 - [ImportTsv－HBase数据导入工具](http://blog.csdn.net/opensure/article/details/47111705) 参考这个
 
 ###### 命令历史
@@ -341,7 +360,9 @@ hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=testfm:inc
 
 [Hbase集群间数据迁移方法总结](http://blog.csdn.net/jingling_zy/article/details/7554676)
 
+[源hbase集群中复制出HBase](http://blog.csdn.net/zreodown/article/details/7917532)
 
+-[hbase meta表修复](http://blackproof.iteye.com/blog/2052898)
 
 [解决方案：hbase数据迁移发生ERROR: Unknown table错误](http://www.voidcn.com/article/p-tdnmjldo-baa.html) 这篇文章非常有参考价值  并且提到了 使用 get put 直接导出导入
 

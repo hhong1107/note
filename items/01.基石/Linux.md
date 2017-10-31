@@ -427,6 +427,6 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 - -[linux下的缓存机制及清理buffer/cache/swap的方法梳理](http://www.cnblogs.com/kevingrace/p/5991604.html)
 
-- ​
+- [手动释放linux内存cache](https://linux.cn/article-211-1.html)
 
   ​

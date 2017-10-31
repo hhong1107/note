@@ -75,6 +75,7 @@ ribbon.ReadTimeout=6000
 - [Spring filter和拦截器(Interceptor)的区别和执行顺序](http://www.cnblogs.com/ycpanda/p/3637312.html)
 - [四种常见的 POST 提交数据方式](https://imququ.com/post/four-ways-to-post-data-in-http.html)
 - [解决在Filter中读取Request中的流后, 然后再Control中读取不到的做法](http://my.oschina.net/vernon/blog/363693?fromerr=2jheR52d)
+- [spring cloud-zuul的Filter详解](http://blog.csdn.net/liuchuanhong1/article/details/62236793) 这里有路由直接返回的的方法
 - []()
 - []()
 - []()
