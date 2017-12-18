@@ -6,7 +6,7 @@
 - [Spring 表达式语言之 SpEL 语法](http://www.importnew.com/17724.html)
 - [Spring 表达式语言(SpEL)](http://sxlkk.iteye.com/blog/2168423)
 - [解决 @ResponseBody返回中文字符串乱码以及生僻字被强制以unicode方式显示问题](http://blog.csdn.net/psu_vjd/article/details/52453404)
-- []()
+- [spring mvc获取header](https://www.cnblogs.com/lijc1990/p/3635780.html)
 - []()
 - []()
 - []()

@@ -15,7 +15,8 @@
 - [Netty实现高性能RPC服务器优化篇之消息序列化](http://www.cnblogs.com/jietang/p/5675171.html)
 - [netty处理粘包问题——1](http://blog.csdn.net/bestone0213/article/details/47108419)
 - [Netty](http://lippeng.iteye.com/blog/1907279)
-- []()
+- [netty如何实现向客户端主动发送消息](https://segmentfault.com/q/1010000005112923)
+- [基于netty TCP server server主动给client 发消息解决方案](http://blog.csdn.net/yaobo2816/article/details/49073557)
 - []()
 - []()
 

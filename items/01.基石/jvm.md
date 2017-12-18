@@ -15,3 +15,4 @@ vmstat | sed -n '/[0-9]/p'
 
 
 -[Xms Xmx PermSize MaxPermSize 区别](http://www.cnblogs.com/mingforyou/archive/2012/03/03/2378143.html)
+- [ jvm 内存dump、gc查看、线程死锁，jmap、jstack、jstat](http://blog.csdn.net/u013851082/article/details/53665117)
