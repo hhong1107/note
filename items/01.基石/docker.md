@@ -126,6 +126,8 @@ http://www.server110.com/docker/201411/11105.html
 
 [使用docker运行mysql实例](http://www.jianshu.com/p/c24e3e5f5b58)
 
+[自己学Docker:6.Docker的数据持久化之数据卷容器](http://blog.csdn.net/mungo/article/details/51263870)
+
 
 
 

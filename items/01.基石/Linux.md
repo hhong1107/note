@@ -419,3 +419,4 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 [Linux命令大全](http://man.linuxde.net/par/3)
 
+[linux公社下载](http://linux.linuxidc.com/)

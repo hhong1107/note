@@ -25,7 +25,7 @@
 - [Spring Boot Junit单元测试](https://yq.aliyun.com/articles/6925)
 - [如何优雅地停止运行中的内嵌Tomcat的Spring Boot应用](http://jaskey.github.io/blog/2016/04/05/shutdown-spring-boot-application-gracefully/)
 - [正确、安全地停止SpringBoot应用服务](http://www.jianshu.com/p/44ef43b282f0)
-- []()
+- [服务链路追踪](https://zhuanlan.zhihu.com/p/26991897)
 - []()
 - []()
 - []()
