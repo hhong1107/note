@@ -387,6 +387,8 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 - [linux的hostname修改详解](http://soft.chinabyte.com/os/281/11563281.shtml)
 
 
+[12款最佳Linux命令行终端工具](http://www.vaikan.com/best-terminal-alternatives-for-linux-systems/)
+
 
 
 

@@ -27,7 +27,7 @@ http://www.cnblogs.com/viviman/archive/2013/01/29/2881784.html
 - [基于Hadoop的数据仓库Hive 学习指南](http://blog.csdn.net/achuo/article/details/51332214)
 - [Hive定义、Hive与HBase关系、Hive与RDBMS的关系、数据库与数据仓库的区别](http://blog.csdn.net/u012110719/article/details/48690189)
 - -[Hive性能优化](http://www.cnblogs.com/smartloli/p/4356660.html)
-- []()
+- [HIVE 基本命令](http://blog.csdn.net/u011138533/article/details/50343277)
 - []()
 - []()
 - []()
