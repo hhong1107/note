@@ -140,6 +140,10 @@ hadoop dfsadmin -safemode leave
 
 ### 异常处理
 
+
+
+-[hbase创建表提示表已经存在而list显示无该表的处理](http://www.cnblogs.com/wxflovedxd/p/3668150.html)
+
 [hbase遇到问题及解决方法](http://blog.csdn.net/wuwenxiang91322/article/details/45843307)
 
 [hadoop异常大全](http://blog.csdn.net/zgc625238677/article/details/17241467)

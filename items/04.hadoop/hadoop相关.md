@@ -39,9 +39,9 @@
 - [Hadoop/Yarn/MapReduce内存分配（配置）方案](http://blog.csdn.net/bluishglc/article/details/42436321)  参考这个配置
 - [Hadoop教程](http://www.yiibai.com/hadoop/hadoop_enviornment_setup.html#article-start)
 - -[bigdata_hadoop集群配置_内存分配](http://www.cnblogs.com/cphmvp/p/6055353.html)
-- []()
-- []()
-- []()
+- [Hadoop2.2.0中配置SecondaryNameNode](http://blog.csdn.net/xichenguan/article/details/27213089)
+- [Hadoop2的高可用并取代SecondaryNamenode](http://blog.csdn.net/jarth/article/details/52839864)
+- [Hadoop namenode重新格式化需注意问题](http://blog.csdn.net/gis_101/article/details/52821946)
 - []()
 - []()
 - []()
