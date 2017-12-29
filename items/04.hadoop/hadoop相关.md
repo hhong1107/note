@@ -42,12 +42,12 @@
 - [Hadoop2.2.0中配置SecondaryNameNode](http://blog.csdn.net/xichenguan/article/details/27213089)
 - [Hadoop2的高可用并取代SecondaryNamenode](http://blog.csdn.net/jarth/article/details/52839864)
 - [Hadoop namenode重新格式化需注意问题](http://blog.csdn.net/gis_101/article/details/52821946)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Hadoop--NameNode && SecondNameNode](http://blog.csdn.net/sinat_26230689/article/details/52448459)
+- [hadoop SecondNamenode详解](http://blog.csdn.net/chen_13608994610/article/details/51448664)
+- [NameNode和SecondaryName](http://blog.csdn.net/lantian0802/article/details/50318317)
+- [模拟namenode宕机：数据块损坏，该如何修复](http://www.aboutyun.com/thread-7437-1-1.html)
+- [HADOOP NAMENODE 崩溃恢复记录](http://blog.sina.com.cn/s/blog_7c5a82970101szjp.html)
+- [Hadoop文档](http://hadoop.apache.org/docs/r1.0.4/cn/index.html)
 
 #### 其他
 
