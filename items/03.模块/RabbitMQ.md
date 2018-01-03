@@ -82,7 +82,11 @@
 - [Kafka、RabbitMQ、RocketMQ消息中间件的对比—— 消息发送性能](https://yq.aliyun.com/articles/25385)
 - [ AMQP协议（经典）](http://blog.csdn.net/zhangxinrun/article/details/6411841)
 - [RabbitMQ中的基本概念](http://emacsist.github.io/2015/12/06/RabbitMQ中的基本概念/)
-- []()
+- -[RabbitMQ erlang.cookie解惑](http://www.cnblogs.com/xgtx/articles/6068392.html)
+- -[RabbitMQ报错Error: unable to connect to node rabbit@xxx: nodedown的解决方式](http://chingo.org/post/rabbitmq-error-unable-to-connect-to-node-rabbit-nodedown-solution.html)
+- -[RabbitMQ学习笔记四：RabbitMQ命令（附疑难问题解决）](http://www.cnblogs.com/wuzhiyuan/p/6856985.html)
+- [Rabbitmq学习之路2-rabbitmqctl](https://my.oschina.net/guol/blog/186445)
+- -[RabbitMQ 集群与高可用配置](http://88250.b3log.org/rabbitmq-clustering-ha)
 - []()
 - []()
 

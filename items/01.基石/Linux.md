@@ -417,7 +417,9 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 - [linux下的top命令参数说明 （virt,res,shr,data 的意义）](http://blog.csdn.net/liuxingjiaofu/article/details/8237967)
 - -[linux下的缓存机制及清理buffer/cache/swap的方法梳理](http://www.cnblogs.com/kevingrace/p/5991604.html)
 - [手动释放linux内存cache](https://linux.cn/article-211-1.html)
-- ​
+- [linux查看哪个进程占用磁盘IO](http://blog.csdn.net/daiyudong2020/article/details/53863314)
+- -[Linux查看某个进程的磁盘IO读写情况](http://www.cnblogs.com/EasonJim/p/8099956.html)
+- [在Load average 高的情况下如何鉴别系统瓶颈](http://blog.csdn.net/aliaichidantong/article/details/70056182)
 
 [Linux命令大全](http://man.linuxde.net/par/3)
 
