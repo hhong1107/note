@@ -125,6 +125,8 @@ export TZ='Asia/Shanghai'
 
 - 压缩解压缩+密码
 
+- 安装gnome   sudo apt-get  install gnome   重启后就可以了 注意看提示
+
 
 ````shell
 tar -zcvf - pma|openssl v4.0.0.cer -salt -k 6kIu9RE8OBciD5nC | dd of=v4.0.0.cer.tar

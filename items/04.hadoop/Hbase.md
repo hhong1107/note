@@ -65,6 +65,8 @@
 
 [Hbase教程](http://www.yiibai.com/hbase/hbase_delete_data.html)
 
+- [hbase热点问题(数据倾斜)解决方案---rowkey散列和预分区设计](http://blog.csdn.net/w1014074794/article/details/73140489)
+
 
 
 #### 数据迁移相关

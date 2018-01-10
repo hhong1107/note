@@ -48,6 +48,8 @@
 - [模拟namenode宕机：数据块损坏，该如何修复](http://www.aboutyun.com/thread-7437-1-1.html)
 - [HADOOP NAMENODE 崩溃恢复记录](http://blog.sina.com.cn/s/blog_7c5a82970101szjp.html)
 - [Hadoop文档](http://hadoop.apache.org/docs/r1.0.4/cn/index.html)
+- [hadoop详细了解5个进程的作用](http://www.aboutyun.com/thread-7088-1-1.html)
+- ​
 
 #### 其他
 

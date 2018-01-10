@@ -170,7 +170,7 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 - [ Docker实践(五)：镜像的概念、管理(查看、下载、删除)](http://blog.csdn.net/u010246789/article/details/54091343)
 - [docker镜像详解 docker命令详解](http://blog.csdn.net/u010098331/article/details/53485539)
 - [redis的两种备份方式](http://blog.csdn.net/subuser/article/details/8157178)
-- []()
+- [Redis集群搭建与简单使用](http://blog.csdn.net/jarth/article/details/53196319)
 
 
 
