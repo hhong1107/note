@@ -47,8 +47,8 @@
 > - java -jar cloud-simple-service-1.0.0.jar --config.profile =test
 > - 此时应用就会加载测试环境下的配置信息。
 
-  1. 使用配置文件 @Value("${my.name}")
-  2. 打开刷新
+    1. 使用配置文件 @Value("${my.name}")
+    2. 打开刷新
 > - 在客户端的bootstrap.properties 启动配置刷新
 > - @RefreshScope
 > - endpoints.restart.enabled=true
@@ -73,4 +73,7 @@
   - [Spring Boot 属性配置和使用](http://blog.csdn.net/isea533/article/details/50281151)
   - [SpringCloud：分布式配置服务器 ConfigServer](http://www.tuicool.com/articles/ZFFfQj)
   - [spring boot 参考指南](https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/content/III.%20Using%20Spring%20Boot/20.%20Packaging%20your%20application%20for%20production.html)
+  - 配置优先级问题：也可以说使用占位符的方式
+    - [Spring Cloud Config 配置属性覆盖优先级。](http://www.cnblogs.com/xingxueliao/p/7113651.html) 
+    - [SpringCloud Config Server实践](http://blog.csdn.net/ssrc0604hx/article/details/52802392)
 ----
