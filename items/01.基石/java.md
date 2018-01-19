@@ -88,6 +88,8 @@ static {
 - [JXL读取货币类型和科学计数法的处理](http://www.xuebuyuan.com/791820.html)
 - [ArrayList.toArray(T[\] a) 的说明](http://blog.csdn.net/zhangyunfei_happy/article/details/51153754)
 - -[JVM:查看java内存情况命令](http://www.cnblogs.com/zzck/p/5707168.html)
+- [Java读取String分行字符串](http://blog.csdn.net/fjssharpsword/article/details/68066502)
+- ​
 - []()
 - []()
 - []()

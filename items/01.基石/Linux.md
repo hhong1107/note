@@ -424,3 +424,8 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 [Linux命令大全](http://man.linuxde.net/par/3)
 
 [linux公社下载](http://linux.linuxidc.com/)
+
+[Ubuntu 美化及超 NB 的 zsh 配置](https://zhuanlan.zhihu.com/p/27052046)
+
+[Ubuntu 下安装oh-my-zsh](https://www.jianshu.com/p/9a5c4cb0452d)
+
