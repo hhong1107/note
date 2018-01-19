@@ -87,6 +87,7 @@
 - -[RabbitMQ学习笔记四：RabbitMQ命令（附疑难问题解决）](http://www.cnblogs.com/wuzhiyuan/p/6856985.html)
 - [Rabbitmq学习之路2-rabbitmqctl](https://my.oschina.net/guol/blog/186445)
 - -[RabbitMQ 集群与高可用配置](http://88250.b3log.org/rabbitmq-clustering-ha)
+- -[python RabbitMQ队列使用（入门篇）](http://www.cnblogs.com/kerwinC/p/5967584.html)
 - []()
 - []()
 

@@ -32,7 +32,9 @@ $ sudo pip install --upgrade virtualenv
 
 [Requests的好基友BeautifulSoup4](https://mp.weixin.qq.com/s/k_wQWkb3BieR3dtL-9Tr8A)
 
+[Mac下 Pyenv 的安装使用](https://www.jianshu.com/p/cea9259d87df) 版本管理工具  ※  如果安装报错可能是没有gcc   yum -y install gcc
 
+-[Python多版本共存管理工具之pyenv](http://www.cnblogs.com/ZhangRuoXu/p/6367084.html)
 
 
 
@@ -69,6 +71,12 @@ binfile=open(filepath,'wb')    写二进制文件
 ````
 
 
+
+- 指定python版本
+
+````python
+#!/usr/local/opt/python/bin/python2.7
+````
 
 
 
