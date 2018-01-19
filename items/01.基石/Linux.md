@@ -125,6 +125,8 @@ export TZ='Asia/Shanghai'
 
 - 压缩解压缩+密码
 
+- 安装gnome   sudo apt-get  install gnome   重启后就可以了 注意看提示
+
 
 ````shell
 tar -zcvf - pma|openssl v4.0.0.cer -salt -k 6kIu9RE8OBciD5nC | dd of=v4.0.0.cer.tar
@@ -136,6 +138,8 @@ openssl des3 -d -k p0gXOwb73BRsuK6m -salt -in ddsc.tar.gz | tar xzf -
 ````
 
 - 关闭防火墙 centos 7: systemctl stop firewalld
+- 查看端口：netstat -anp|grep 80 
+- 如果提示netstat未找到命令: yum install net-tools
 
 
 #### 用户相关
