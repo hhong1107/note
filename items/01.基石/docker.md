@@ -83,6 +83,14 @@ http://www.server110.com/docker/201411/11105.html
 - [官方安装指南](https://store.docker.com/editions/community/docker-ce-server-centos) 按照这个就能使用
 
   [docker容器中安装vim](http://blog.csdn.net/achilles12345/article/details/47122963)其他软件安装也可以参考啊
+
+  [Docker 管理工具的选择：Kubernetes 还是 Swarm？](http://dockone.io/article/2556)
+
+  [docker集群管理工具kubernetes初步搭建](http://blog.csdn.net/jay763836801/article/details/52648280)
+
+  [十分钟带你理解Kubernetes核心概念](http://www.dockone.io/article/932)
+
+  [Kubernetes初探](http://blog.csdn.net/zhangjun2915/article/details/40598151)
 ##### 教程类
 - [教程](http://www.runoob.com/docker/docker-command-manual.html)
 - [Docker实战-书籍](http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1?fr=aladdin&key=docker教程&f=read###)
