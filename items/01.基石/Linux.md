@@ -30,6 +30,19 @@ screen -ls列出当前挂起的screen
 
 
 
+###### 文件夹软硬连接
+
+````shell
+# 删除软连接
+rm -rf current    #注意删除的时候current后面不要加  / 
+# 创建软连接 加上 -s
+ln -s [源文件地址] [创建的连接文件夹 要未存在的]
+````
+
+[linux系统链接---目录链接](http://blog.csdn.net/codetz/article/details/52425104)
+
+
+
 ###### 修改时区
 
 -[我使用过的Linux命令之tzselect - 选择时区](http://codingstandards.iteye.com/blog/834280)

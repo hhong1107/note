@@ -55,3 +55,14 @@ service nginx status 	# 查看状态
 [Nginx配置实现前端Route路由与后端路由的分离](http://blog.csdn.net/a314368439/article/details/77773351)
 
 [Nginx proxy pass路由转发简单用法](http://blog.csdn.net/guyue35/article/details/53907421)
+
+
+
+##### 转发真实IP相关
+
+-[学习笔记 - Nginx在多层代理下获取真实客户端IP地址](http://www.cnblogs.com/harryc/p/6361892.html)
+
+-[Nginx获取真实用户IP](http://blog.csdn.net/zhongzh86/article/details/53067691)
+
+-[nginx 如何配置来获取用户真实IP](http://blog.csdn.net/bigtree_3721/article/details/72820081)
+
