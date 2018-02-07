@@ -176,4 +176,15 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 
 ### 命令
 
+
+
+````shell
+# 导出数据
+./redis-cli KEYS "ddsc-app-accountId-cookie:*" | xargs ./redis-cli MGET  > /tmp/report.txt
+````
+
+
+
+
+
 清空缓存：./redis-cli KEYS "*" | xargs ./redis-cli DEL
