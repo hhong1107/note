@@ -56,7 +56,21 @@ service nginx status 	# 查看状态
 
 [Nginx proxy pass路由转发简单用法](http://blog.csdn.net/guyue35/article/details/53907421)
 
+-[Nginx+Https配置](https://segmentfault.com/a/1190000004976222)
 
+[nginx启用对HTTP2的支持](http://www.jackieathome.net/archives/437.html)
+
+-[ Nginx 上配置 HTTP2 最实在的教程了](http://www.cnblogs.com/probemark/p/5917927.html)
+
+[Nginx负载均衡配置](http://blog.csdn.net/xyang81/article/details/51702900)
+
+-[Nginx负载均衡的详细配置及使用案例详解.](http://www.cnblogs.com/wang-meng/p/5861174.html)
+
+[如何快速实现一个基于Nginx的网站监控场景----需求篇](https://yq.aliyun.com/articles/72273)
+
+[nginx优化 突破十万并发](http://blog.csdn.net/gb4215287/article/details/51765110)
+
+[Nginx实现高并发优化](http://blog.csdn.net/atai2002/article/details/76041518)
 
 ##### 转发真实IP相关
 

@@ -448,3 +448,11 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 [Ubuntu下deb包的安装方法](http://blog.csdn.net/kevinhg/article/details/5934462)
 
+-[Linux系统CPU核数等信息查看](http://blog.csdn.net/fgf00/article/details/52584810)
+
+-[ulimit 命令详解](http://www.cnblogs.com/zengkefu/p/5649407.html)
+
+[linux ulimit 查看max open files](http://blog.csdn.net/kobeyan/article/details/7891443)
+
+[Linux cp 命令的15个示例 - 创建文件和目录的副本](https://linux.cn/article-2687-1.html)
+
