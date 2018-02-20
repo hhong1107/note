@@ -153,6 +153,13 @@ openssl des3 -d -k p0gXOwb73BRsuK6m -salt -in ddsc.tar.gz | tar xzf -
 - 关闭防火墙 centos 7: systemctl stop firewalld
 - 查看端口：netstat -anp|grep 80 
 - 如果提示netstat未找到命令: yum install net-tools
+-  关闭swap [Ubuntu 12.04的SWAP设置](http://www.linuxidc.com/Linux/2013-03/80208.htm)
+
+
+````shell
+sudo swapoff -a
+````
+
 
 
 #### 用户相关
