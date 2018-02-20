@@ -59,8 +59,11 @@
 - [HBase高性能复杂条件查询引擎](http://blog.csdn.net/bluishglc/article/details/31799255)
 - [hbase高性能读取数据](http://blog.csdn.net/zbc1090549839/article/details/50487336)
 - [Hbase 统计表行数的3种方式总结](http://blog.csdn.net/u013709332/article/details/52296748)
-
-
+- [Hbase使用filter快速高效查询](http://www.uml.org.cn/sjjm/201304283.asp)
+- [Hbase中内置Filter详解](http://blog.csdn.net/liuchuanhong1/article/details/53287080)
+- [Ganglia监控HDFS和HBase指标说明](http://blog.csdn.net/xuxiuning/article/details/52213527)
+- [Ganglia监控Hadoop与HBase集群](https://yq.aliyun.com/articles/38824)
+- [ganglia安装和配置监控hadoop，hbase，spark](http://blog.csdn.net/haoxiaoyan/article/details/52883032)
 -[hbase操作（shell 命令，如建表，清空表，增删改查）以及 hbase表存储结构和原理](http://blog.csdn.net/longshenlmj/article/details/48317567)
 
 [Hbase教程](http://www.yiibai.com/hbase/hbase_delete_data.html)
