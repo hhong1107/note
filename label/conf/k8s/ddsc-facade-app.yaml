@@ -11,7 +11,3 @@ spec:                     #pod中容器的详细定义
     image: ddsc.dock.registry:5000/ddsc-facade-app:2.0.0         #容器中的镜像
     args: [ '--config.profile=test' ]     #容器的启动命令列表（不配置的话使用镜像内部的命令）
 
-  volumes:                  #在该pod上定义共享存储卷
-  - name: app-logs
-  hostPth: 
-    path: "/tmp/ddsc-logs"
