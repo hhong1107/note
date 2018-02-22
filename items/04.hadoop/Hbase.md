@@ -64,6 +64,7 @@
 - [Ganglia监控HDFS和HBase指标说明](http://blog.csdn.net/xuxiuning/article/details/52213527)
 - [Ganglia监控Hadoop与HBase集群](https://yq.aliyun.com/articles/38824)
 - [ganglia安装和配置监控hadoop，hbase，spark](http://blog.csdn.net/haoxiaoyan/article/details/52883032)
+- [配置 HBase 的监控工具 ganglia](http://www.jikexueyuan.com/course/2536.html)
 -[hbase操作（shell 命令，如建表，清空表，增删改查）以及 hbase表存储结构和原理](http://blog.csdn.net/longshenlmj/article/details/48317567)
 
 [Hbase教程](http://www.yiibai.com/hbase/hbase_delete_data.html)

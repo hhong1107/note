@@ -79,7 +79,7 @@
 -[聊聊你可能误解的Kubernetes Deployment滚动更新机制](http://blog.csdn.net/WaltonWang/article/details/77461697?locationNum=5&fps=1)
 
 -[Kubernetes系列05：深入掌握Service](http://blog.csdn.net/levy_cui/article/details/70336283) ※
-
+-[kubernetes 服务发现与注册个人想法](http://blog.csdn.net/qq_29778131/article/details/73603494)
 
 
 
