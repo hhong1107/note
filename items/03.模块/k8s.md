@@ -80,8 +80,13 @@
 
 -[Kubernetes系列05：深入掌握Service](http://blog.csdn.net/levy_cui/article/details/70336283) ※
 -[kubernetes 服务发现与注册个人想法](http://blog.csdn.net/qq_29778131/article/details/73603494)
+-[kubeadm 搭建 Kubernetes 集群](https://www.kubernetes.org.cn/878.html)
+-[在生产环境使用Kuberntes一年后，我们总结了这些经验和教训](https://www.jianshu.com/p/f0b980e9fa25)
+-[官方文档](https://kubernetes.io/docs/concepts/)
 
-
+-[使用kubeadm在Ubuntu16.04上搭建Kubernetes1.5集群](https://www.jianshu.com/p/602c5bdbbd4d)
+-[NETFLIX OSS, SPRING CLOUD 以及 KUBERNETES？关于它们的种种！](http://www.useopen.net/blog/2016/netflix-oss-or-kubernetes-how-about-both.html)
+-[Kubernetes入门（三） - 网络](http://blog.csdn.net/ztsinghua/article/details/52411440)
 
 
 -[Netflix OSS、Spring Cloud还是Kubernetes? 都要吧！](http://www.infoq.com/cn/articles/netflix-oss-spring-cloud-kubernetes?utm_source=infoq&utm_medium=popular_widget&utm_campaign=popular_content_list&utm_content=presentation)
