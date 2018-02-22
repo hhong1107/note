@@ -53,3 +53,30 @@
 -[centos7下安装kubectl](http://www.niuhp.com/docker/install-kubectl-on-centos7-64.html)  参考这个网站下载zip包来安装
 
 -[Kubernetes网络原理及方案](https://www.kubernetes.org.cn/2059.html)
+
+
+### 命令
+
+````shell
+    minikube status
+    minikube dashboard
+    kubectl cluster-info  - 查看状态
+    kubectl get deploy xxx
+
+    kubectl get po -o wide
+    kubectl get rs
+    # 查看service
+    kubectl get svc
+
+    # 查看暴露的端口
+    kubectl get ep
+    
+    kubectl logs xxx
+    kubectl exec -it  xxx /bin/bash
+
+    # 升级image
+    kubectl set image deploy nginx nginx=nginx:1.9.1
+    # 查看详细详细
+    kubectl describe deploy nginx
+
+````
