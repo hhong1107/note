@@ -3,18 +3,19 @@ kind: Pod                 #类型，pod
 metadata:                 #元数据
   name: ddsc-facade-app            #元数据，pod的名字
   labels:                 #元数据，标签列表
-     profile: test        #元数据，标签的名字
-  # namespace: ddsc.test
+     profile: dev        #元数据，标签的名字
+  namespace: ddsc-dev
 
 spec:                     #pod中容器的详细定义
   containers:             #pod中的容器列表，可以有多个容器
   - name: ddsc-facade-app
     image: ddsc.dock.registry:5000/ddsc-facade-app:2.0.0         #容器中的镜像
-    args: [ '--config.profile=test' ]     #容器的启动命令列表（不配置的话使用镜像内部的命令）
+    args: [ '--config.profile=dev' ]     #容器的启动命令列表（不配置的话使用镜像内部的命令）
     volumeMounts:
-        - name: ddsc-logs
+        - name: nfs-storage
           mountPath: /logs
   volumes:
-  - name: ddsc-logs
-    hostPath:
-     path: /tmp/ddsc-logs
+  - name: nfs-storage
+    nfs:
+     server: 192.168.3.181
+     path: "/home/nfs_dir/"

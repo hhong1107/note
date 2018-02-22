@@ -222,6 +222,16 @@ chmod u-w /etc/sudoers
 
 #### 软件相关
 
+
+
+###### nfs
+
+-[Ubuntu 中挂载其它NFS服务器的文件系统](http://blog.csdn.net/zpf336/article/details/50825847)
+
+-[centos7下的NFS 服务器端的搭建](http://blog.csdn.net/piaojinwodeshijie/article/details/62416718)
+
+
+
 - [查看端口被哪个程序占用](http://www.2cto.com/os/201212/172982.html)
 
   ````

@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: ddsc-common
+    namespace: ddsc-dev
+spec:
+    replicas: 2
+template:
+    metadata:
+        labels:
+            app: ddsc-common-web
+    spec:
+        containers:
+        - name: ddsc-common
+          image: ddsc.dock.registry:5000/ddsc-common:2.0.0
+          volumeMounts:
+            - name: nfs-storage
+              mountPath: /logs
+          ports:
+          - containerPort: 5002
+            
+    volumes:
+    - name: nfs-storage
+        nfs:
+        server: 192.168.3.181
+        path: "/home/nfs_dir/"
