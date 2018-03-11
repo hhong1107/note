@@ -77,3 +77,5 @@
     - [Spring Cloud Config 配置属性覆盖优先级。](http://www.cnblogs.com/xingxueliao/p/7113651.html) 
     - [SpringCloud Config Server实践](http://blog.csdn.net/ssrc0604hx/article/details/52802392)
 ----
+ - [springcloud(六)：配置中心git示例](https://www.cnblogs.com/ityouknow/p/6892584.html)
+ - [springcloud(七)：配置中心svn示例和refresh](http://www.cnblogs.com/ityouknow/p/6906917.html)

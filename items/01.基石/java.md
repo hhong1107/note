@@ -89,8 +89,8 @@ static {
 - [ArrayList.toArray(T[\] a) 的说明](http://blog.csdn.net/zhangyunfei_happy/article/details/51153754)
 - -[JVM:查看java内存情况命令](http://www.cnblogs.com/zzck/p/5707168.html)
 - [Java读取String分行字符串](http://blog.csdn.net/fjssharpsword/article/details/68066502)
-- ​
-- []()
+- ​[Java 获取本机的IP与MAC地址实现详解](http://www.jb51.net/article/93343.htm)
+- [JAVA从本机获取IP地址](https://www.cnblogs.com/xiaoBlog2016/p/7076230.html)
 - []()
 - []()
 - []()

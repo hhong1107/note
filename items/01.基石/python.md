@@ -39,7 +39,7 @@ $ sudo pip install --upgrade virtualenv
 -[python字符串连接的三种方法及其效率、适用场景详](https://www.cnblogs.com/chenjingyi/p/5741901.html)
 -[Python3中byte和string之间各种编码转换](http://blog.csdn.net/htdeyanlei/article/details/50866307)
 -[Python—操作redis](https://www.cnblogs.com/melonjiang/p/5342505.html)
-
+-[使用python来操作redis用法详解](https://www.jianshu.com/p/2639549bedc8)
 #### 知识点
 
 #####  python使用any判断一个对象是否为空的方法

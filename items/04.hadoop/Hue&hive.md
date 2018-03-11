@@ -14,7 +14,8 @@ hive.fetch.task.conversion=none
 # 启动 hiveserver2 提供给hue访问
 ./hive --service hiveserver2 --hiveconf hive.server2.thrift.port=10001
 ````
-
+# hbase thrift
+./hbase thrift -p 9090 start
 
 
 [官网](http://gethue.com/category/hive-fr/)
@@ -241,6 +242,8 @@ https://community.hortonworks.com/questions/38116/hive-query-failing-with-orgapa
 
 ````shell
 root@0d6c2379ca20:/hue# ./build/env/bin/hue runserver_plus 0.0.0.0:8888
+# nohup ./build/env/bin/hue runserver_plus 0.0.0.0:8888 &
+
 root@0d6c2379ca20:/hue# vim desktop/conf/pseudo-distributed.ini
 ````
 
