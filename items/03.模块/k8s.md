@@ -113,10 +113,14 @@
 
 -[Kubernetes网络原理及方案](https://www.kubernetes.org.cn/2059.html)
 
+-
+
 
 ### 命令
 
 ````shell
+	minikube start
+	minikube stop
     minikube status
     minikube dashboard
     kubectl cluster-info  - 查看状态
@@ -151,3 +155,98 @@ https://storage.googleapis.com/kubernetes-release/release/v1.9.3/bin/linux/amd64
 http://www.niuhp.com/docker/install-kubectl-on-centos7-64.html  使用这个安装
 
 http://blog.csdn.net/qq_35904833/article/details/77447867  连接数据库
+
+
+
+
+
+-----
+
+
+
+### 集群搭建
+
+
+
+####  参考网站
+
+-[资源下载](https://pan.baidu.com/s/1eUixGvo) 已经保存在百度云盘的 软件里面了
+
+-[liu9718214的专栏](http://blog.csdn.net/liu9718214)
+
+
+
+-[Kubernetes HA 1.9 高可用集群,本地离线部署](https://mp.weixin.qq.com/s?__biz=MzI5ODQ2MzI3NQ==&mid=2247484401&idx=1&sn=514ca7654d686a7938b6b1f821a61139&chksm=eca43ab5dbd3b3a3e0390708e4d5cc7ed5e0651038e05b704ae341d625f4eb273d4e55ed9489&scene=38#wechat_redirect) 微信上的 还不错
+
+> 
+>
+> - k8s 高可用2个核心 ==apiserver master== and ==etcd==
+> - ==apiserver master==：（需高可用）集群核心，集群API接口、集群各个组件通信的中枢；集群安全控制；
+> - ==etcd== ：（需高可用）集群的数据中心，用于存放集群的配置以及状态信息，非常重要，如果数据丢失那么集群将无法恢复；因此高可用集群部署首先就是etcd是高可用集群；
+> - kube-scheduler：调度器 （内部自选举）集群Pod的调度中心；默认kubeadm安装情况下–leader-elect参数已经设置为true，保证master集群中只有一个kube-scheduler处于活跃状态；
+> - kube-controller-manager： 控制器 （内部自选举）集群状态管理器，当集群状态与期望不同时，kcm会努力让集群恢复期望状态，比如：当一个pod死掉，kcm会努力新建一个pod来恢复对应replicas set期望的状态；默认kubeadm安装情况下–leader-elect参数已经设置为true，保证master集群中只有一个kube-controller-manager处于活跃状态；
+> - kubelet: agent node注册apiserver
+> - kube-proxy: 每个node上一个，负责service vip到endpoint pod的流量转发，老版本主要通过设置iptables规则实现，新版1.9基于kube-proxy-lvs 实现
+
+
+
+-[Kubernetes 1.9集群使用traefik发布服务](http://blog.51cto.com/ylw6006/2073718)
+
+-[kubernetes1.9离线部署](http://blog.csdn.net/liu9718214/article/details/79242849)  ☆☆☆☆☆ 重点参考
+
+-[使用kubeadm安装kubernetes1.7/1.8/1.9](http://blog.csdn.net/zhuchuangang/article/details/76572157)  这个用的是阿里云的
+
+-[一键安装脚本](https://github.com/zhuchuangang/k8s-install-scripts/tree/master/kubeadm)
+
+-[Kubernetes环境下的各种调试方法](http://www.cnblogs.com/Jack47/p/debugging-kubernetes-pod.html)
+
+-[kubernetes RBAC实战 kubernetes 用户角色访问控制，dashboard访问，kubectl配置生成](http://www.zhimengzhe.com/bianchengjiaocheng/qitabiancheng/388943.html)
+
+````
+- --authentication-mode=basic
+使用账户密码登录
+````
+
+-[Kubernetes Dashboard 1.7.0部署二三事](https://tonybai.com/2017/09/26/some-notes-about-deploying-kubernetes-dashboard-1-7-0/)
+
+-[ Kubernetes dashboard1.8.0 WebUI安装与配置](http://blog.csdn.net/A632189007/article/details/78840971)
+
+-[Dashboard - Kubernetes的全功能Web界面](https://segmentfault.com/a/1190000006223166)
+
+````
+kubectl logs <pod_name>
+
+
+````
+
+[kubernetes集群问题排查](http://blog.csdn.net/huwh_/article/details/71308301)
+
+-[和我一步步部署 kubernetes 集群](https://github.com/opsnull/follow-me-install-kubernetes-cluster)
+
+-[kubeadm-highavailiability - 基于kubeadm的kubernetes高可用集群部署，支持v1.9.x和v1.7.x版本以及v1.6.x版本](https://github.com/cookeem/kubeadm-ha/blob/master/README_CN.md)
+
+☆☆☆ -[Kubernetes之kubectl常用命令](http://blog.csdn.net/xingwangc2014/article/details/51204224)
+
+-[Kubernetes系统常见运维技巧](http://blog.csdn.net/horsefoot/article/details/51594840)
+
+-[Kubernetes常用命令与常见问题](http://blog.csdn.net/bluishglc/article/details/52440312)
+
+-[使用Kubeadm安装Kubernetes1.5版本](https://www.kubernetes.org.cn/1165.html)
+
+-[使用kubeadm部署kubernetes](http://blog.csdn.net/Andriy_dangli/article/details/79269348)
+
+-[Kubernetes初探：原理及实践应用](https://www.aliyun.com/zixun/content/2_6_1883652.html)
+
+-[安装部署 Kubernetes 集群](http://www.cnblogs.com/Leo_wl/p/8511902.html) 管理台回头可以看一下
+
+#### 命令
+
+````shell
+# 删除节点
+kubectl delete node 节点名字
+````
+
+
+
+
+

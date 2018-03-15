@@ -134,7 +134,7 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 @Cachelabel(aggregateName = "fincar-Account",entityName = "account")
 
 ```
-  #### 参考网站
+  ### spring-redis参考网站
 - [Spring Cache抽象详解](http://jinnianshilongnian.iteye.com/blog/2001040)
 - [Spring Cache](http://www.cnblogs.com/rollenholt/p/4202631.html)
 - [使用AOP 实现Redis缓存注解](http://www.tuicool.com/articles/beUVjyB)
@@ -181,10 +181,38 @@ public class CachingConfigurer extends CachingConfigurerSupport {
 ````shell
 # 导出数据
 ./redis-cli KEYS "ddsc-app-accountId-cookie:*" | xargs ./redis-cli MGET  > /tmp/report.txt
+
+# 清空缓存：
+./redis-cli KEYS "*" | xargs ./redis-cli DEL
 ````
 
 
 
+### 故障
 
 
-清空缓存：./redis-cli KEYS "*" | xargs ./redis-cli DEL
+
+#### 无法写出硬盘
+
+> 客户端启动连接报：
+>
+> [(error) MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk.](http://www.cnblogs.com/anny-1980/p/4582674.html)
+>
+> 意思就是无写出硬盘
+>
+> 看服务器上redis报错：
+>
+> Can't save in background: fork: Cannot allocate memory
+>
+> 也是一个意思
+>
+> 估计是之前稍早时候关闭了  虚拟内存导致：swapoff -a
+>
+> -[redis Can’t save in background: fork: Cannot allocate memory 解决及原理](http://blog.csdn.net/zqz_zqz/article/details/53384854)
+>
+> -[redis故障处理 "Can't save in background: fork: Cannot allocate memory"](http://blog.csdn.net/lizhe_dashuju/article/details/55803644)
+
+
+
+
+

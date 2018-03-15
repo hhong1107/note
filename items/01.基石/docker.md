@@ -320,6 +320,10 @@ DOCKER_OPTS="--insecure-registry 192.168.142.128:5000"
 
 
 
+-[Docker镜像仓库Harbor之搭建及配置](http://blog.csdn.net/liu9718214/article/details/79399230)
+
+-[探索Harbor镜像仓库新的管理功能和界面](http://blog.csdn.net/q48S71bCzBeYLOu9T0n/article/details/77988168)
+
 - ### [Docker daemon日志的位置](http://blog.csdn.net/halcyonbaby/article/details/47336269)
 
 Docker daemon日志的位置，根据系统不同各不相同。  

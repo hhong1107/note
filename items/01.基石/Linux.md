@@ -2,17 +2,17 @@
 
 
 
-#### 问题
+## 问题
 
-##### source .bashrc 报错 command not found: shopt
+- source .bashrc 报错 command not found: shopt
 
-是因为使用了zsh 所以 要 source ~/.zshrc
+  是因为使用了zsh 所以 要 source ~/.zshrc
 
 
 
-#### 使用命令
+## 使用命令
 
-######  screen
+###  screen
 
 ````
 1、新建一个screen 直接screen或者screen -S XXX（XXX是你为这个screen指定的名字）
@@ -30,7 +30,7 @@ screen -ls列出当前挂起的screen
 
 
 
-###### 文件夹软硬连接
+### 文件夹软硬连接
 
 ````shell
 # 删除软连接
@@ -43,7 +43,7 @@ ln -s [源文件地址] [创建的连接文件夹 要未存在的]
 
 
 
-###### 修改时区
+### 修改时区
 
 -[我使用过的Linux命令之tzselect - 选择时区](http://codingstandards.iteye.com/blog/834280)
 
@@ -61,34 +61,131 @@ export TZ='Asia/Shanghai'
 
 
 
+### 显示版本信息
+
+````
+cat /etc/issue  或  name-a
+````
 
 
 
+### centos 安装ssh 
 
-###### 其他命令
+````
+yum install openssh-clients 
+````
 
-- 显示版本信息：cat /etc/issue  或  name-a
+### 关闭centos的防火墙
 
+````shell
+setenforce 0     
+service iptable stop
 
-- centos 安装ssh ：yum install openssh-clients 
-
-
-- 查看网络端口  netstat -an | grep 5672
-
-
-- 关闭centos的防火墙：
-
-          setenforce 0     
-
-          service iptable stop
-
-- 查进程 netstat –apn | grep 8080
+# centos 7: 
+systemctl stop firewalld
 
 
-- jps： 查看Java进程
+sudo systemctl status firewalld.service
+sudo systemctl stop firewalld.service          
+sudo systemctl disable firewalld.service
+````
 
 
-- Kill -9：杀掉server 这个进程
+
+### systemctl命令
+
+http://man.linuxde.net/systemctl
+
+
+
+### 查找文件中内容
+
+````shell
+find . -name "*" |xargs grep "20160205427022"
+````
+
+
+
+### 软件安装
+
+````shell
+# 强制安装ded
+sudo dpkg -i google-chrome-stable_current_i386.deb --force
+# 补齐依赖
+sudo apt-get install -f
+````
+
+
+
+### 查看文件夹大小
+
+````shell
+du -h --max-depth=1 
+du -sh *
+# 使用du -sh * 命令也可以列出当前文件以及文件夹的大小。这个命令要注意：sh与*之前要有个空格的。列出home目录所有文件大小的总和命令为：du -s  /home或du -sh /home
+
+````
+
+
+
+### scp指定端口
+
+````shell
+scp -P33033 zp.tar root@111.222.123.01:/da1/web/zhaopin.shouhuobao.com
+````
+
+
+
+### 查看端口
+
+````shell
+netstat -anp|grep 80 
+# 如果提示netstat未找到命令
+yum install net-tools
+````
+
+
+
+###  关闭swap
+
+ [Ubuntu 12.04的SWAP设置](http://www.linuxidc.com/Linux/2013-03/80208.htm)
+
+```shell
+sudo swapoff -a
+swapoff -a 
+
+sed 
+'s/.*swap.*/#&/'
+ /etc/fstab 
+ # fstab 是什么？
+ 
+```
+
+
+
+### 更改和设置Hostname
+
+[RHEL / Centos Linux 7:更改和设置Hostname命令](http://blog.csdn.net/qiyueqinglian/article/details/51556306)
+
+[CentOS 7 中 hostnamectl 的使用](http://blog.csdn.net/linuxnews/article/details/51112022)
+
+````shell
+hostnamectl --static set-hostname  k8s-node01
+hostnamectl --static set-hostname k8s-master
+# 静态的（static）、瞬态的（transient）、和灵活的（pretty）
+````
+
+
+
+### Linux系统中的日志管理
+
+-[Linux系统中的日志管理](http://blog.csdn.net/qq_25663723/article/details/53037072)
+
+
+
+### 其他命令
+
+- ​
 
 
 -  Nohup ./startWerblogic.sh & ：启动服务并且重定向输出 敲两个回车
@@ -107,24 +204,6 @@ export TZ='Asia/Shanghai'
 
 
 - rm -rf filename 递归强制删除
-
-
-- 查找文件中内容：find . -name "*" |xargs grep "20160205427022"
-
-
-- 强制安装ded： sudo dpkg -i google-chrome-stable_current_i386.deb --force
-
-
-- 补齐依赖 ：sudo apt-get install -f
-
-
-- 查看文件夹大小：du -h --max-depth=1 
-
-
-- scp指定端口：scp -P33033 zp.tar root@111.222.123.01:/da1/web/zhaopin.shouhuobao.com
-
-
-- 使用du -sh * 命令也可以列出当前文件以及文件夹的大小。这个命令要注意：sh与*之前要有个空格的。列出home目录所有文件大小的总和命令为：du -s  /home或du -sh /home
 
 
 - CentOS查看内核版本、系统版本、系统位数 :uname -r    
@@ -150,21 +229,11 @@ tar -czvf - ddsc-gateway.keystore | openssl des3 -salt -k p0gXOwb73BRsuK6m -out 
 openssl des3 -d -k p0gXOwb73BRsuK6m -salt -in ddsc.tar.gz | tar xzf -
 ````
 
-- 关闭防火墙 centos 7: systemctl stop firewalld
-- 查看端口：netstat -anp|grep 80 
-- 如果提示netstat未找到命令: yum install net-tools
--  关闭swap [Ubuntu 12.04的SWAP设置](http://www.linuxidc.com/Linux/2013-03/80208.htm)
 
 
-````shell
-sudo swapoff -a
-````
+## 用户相关
 
-
-
-#### 用户相关
-
-###### 添加用户
+### 添加用户
 
 ````
 sudo adduser xxx 这样的命令会在home目录下添加一个帐号
@@ -187,7 +256,7 @@ Ubuntu建立和删除用户 http://www.linuxidc.com/Linux/2012-06/62985.htm](ht
 
 
 
-###### 给用户添加sudo权限
+### 给用户添加sudo权限
 
 
 
@@ -220,15 +289,37 @@ chmod u-w /etc/sudoers
 
 
 
-#### 软件相关
+## 软件相关
 
 
 
-###### nfs
+### nfs
 
 -[Ubuntu 中挂载其它NFS服务器的文件系统](http://blog.csdn.net/zpf336/article/details/50825847)
 
 -[centos7下的NFS 服务器端的搭建](http://blog.csdn.net/piaojinwodeshijie/article/details/62416718)
+
+````shell
+# 安装
+   yum -y install nfs-utils ,rpcbind
+   # 启动
+   systemctl start   rpcbind.service
+   systemctl start  nfs.service
+   # 设置自启动
+   systemctl enable rpcbind.service
+   systemctl enable nfs.service
+   systemctl status rpcbind.service
+   systemctl status nfs.service
+   mkdir /nfs_share
+   # 客户端挂载
+   showmount -e  192.168.3.181
+   mount -t nfs 192.168.3.181:/home/nfs_dir /nfs_share
+   # 开机自挂载的还没设置 
+````
+
+
+
+
 
 
 
@@ -245,7 +336,7 @@ chmod u-w /etc/sudoers
 
 
 
-###### 卸载软件
+### 卸载软件
 
 ````
 找到此软件名称,然后sudo apt-get purge ......(点点为为程序名称),purge参数为彻底删除文件,
@@ -256,7 +347,7 @@ chmod u-w /etc/sudoers
 
 
 
-###### 解压缩
+### 解压缩
 
 ````
 -c: 建立压缩档案
@@ -357,7 +448,7 @@ unzip file.zip //解压zip
 
 
 
-###### htop
+### htop
 
 安装：
 
@@ -402,7 +493,7 @@ q	F10	Quit htop	结束htop
 
 
 
-#### 参考网站
+## 参考网站
 
 ------
 
