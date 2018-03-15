@@ -81,6 +81,8 @@
 -[Kubernetes系列05：深入掌握Service](http://blog.csdn.net/levy_cui/article/details/70336283) ※
 -[kubernetes 服务发现与注册个人想法](http://blog.csdn.net/qq_29778131/article/details/73603494)
 -[kubeadm 搭建 Kubernetes 集群](https://www.kubernetes.org.cn/878.html)
+-[离线使用 kubeadm 创建 kubernetes 1.9.2 集群](https://my.oschina.net/binges/blog/1615955)
+-[kubernetes1.9离线部署](http://blog.51cto.com/cstsncv/2061943)
 -[在生产环境使用Kuberntes一年后，我们总结了这些经验和教训](https://www.jianshu.com/p/f0b980e9fa25)
 -[官方文档](https://kubernetes.io/docs/concepts/)
 
