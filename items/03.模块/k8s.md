@@ -203,7 +203,7 @@ http://blog.csdn.net/qq_35904833/article/details/77447867  连接数据库
 -[Kubernetes环境下的各种调试方法](http://www.cnblogs.com/Jack47/p/debugging-kubernetes-pod.html)
 
 -[kubernetes RBAC实战 kubernetes 用户角色访问控制，dashboard访问，kubectl配置生成](http://www.zhimengzhe.com/bianchengjiaocheng/qitabiancheng/388943.html)
-
+-[解决Kubernetes 1.6.4 Dashboard无法访问的问题](https://tonybai.com/2017/07/20/fix-cannot-access-dashboard-in-k8s-1-6-4/)
 ````
 - --authentication-mode=basic
 使用账户密码登录
