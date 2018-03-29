@@ -65,19 +65,115 @@ ribbon.ReadTimeout=6000
 ----
 ##### gateway & facade？
 - [SpringMVC中使用Interceptor拦截器](http://haohaoxuexi.iteye.com/blog/1750680)
+
 - [第五章 处理器拦截器详解——跟着开涛学SpringMVC](http://jinnianshilongnian.iteye.com/blog/1670856)
+
 - [SpringMVC拦截器详解 -附带源码分析](http://www.cnblogs.com/fangjian0423/p/springMVC-interceptor.html)
+
 - [ java如何得到GET和POST请求URL和参数列表](http://blog.csdn.net/yaerfeng/article/details/18942739)
+
 - [InputStream类只能读取一次](http://www.cnblogs.com/fzll/p/3400558.html)
+
 - [ServletRequest中getReader()和getInputStream()只能调用一次的解决办法](http://liwx2000.iteye.com/blog/1542431)
+
 - [SpringMVC源码剖析（五)-消息转换器HttpMessageConverter](http://my.oschina.net/lichhao/blog/172562)
+
 - [SpringMVC中注解控制器及数据绑定](http://www.cnblogs.com/duanxz/p/5196087.html)
+
 - [Spring filter和拦截器(Interceptor)的区别和执行顺序](http://www.cnblogs.com/ycpanda/p/3637312.html)
+
 - [四种常见的 POST 提交数据方式](https://imququ.com/post/four-ways-to-post-data-in-http.html)
+
 - [解决在Filter中读取Request中的流后, 然后再Control中读取不到的做法](http://my.oschina.net/vernon/blog/363693?fromerr=2jheR52d)
+
 - [spring cloud-zuul的Filter详解](http://blog.csdn.net/liuchuanhong1/article/details/62236793) 这里有路由直接返回的的方法
+
 - []()
-- []()
+
+  ## 问题
+
+  ### serviceId 改为url
+
+  现象：facade-app 报 com.fasterxml.jackson.databind.JsonMappingException: No suitable 
+
+  说明该系统无法解析报文
+
+  通过断点以下类的代码
+
+  /home/jh/~/codes/.m2/repository/org/springframework/spring-webmvc/4.2.6.RELEASE/spring-webmvc-4.2.6.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/AbstractMessageConverterMethodArgumentResolver.java:196
+
+````java
+// IoUtiles.toString(inputMessage.getBody())   
+// 发现这里的报文已经被截取了
+if (inputMessage.getBody() != null) {
+    inputMessage = getAdvice().beforeBodyRead(inputMessage, param, targetType, converterType);
+    body = genericConverter.read(targetType, contextClass, inputMessage);
+    body = getAdvice().afterBodyRead(body, inputMessage, param, targetType, converterType);
+}
+
+/**
+/home/jh/~/codes/.m2/repository/org/springframework/spring-webmvc/4.2.6.RELEASE/spring-webmvc-4.2.6.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java:743
+
+这里发现 header中有个字段 context-length 刚好是被截取到的报文长度
+而这个值是 最原始的app发起请求的时候的报文长度 也就是说 在网关处理塞入新的字段后 报文已经比原始的长了，而网关把原始的 context-length 传给了下游系统。而下游系统在接到报文后以这个长度为标准去截取了不完整的字符串。
+
+  
+ */ 
+  
+````
+
+解决办法：让网关不要把context-length转发下来
+
+
+
+````properties
+
+zuul.routes.ddsc-facade-app.path=/ddsc-app/**
+zuul.routes.ddsc-facade-app.serviceId=ddsc-facade-app
+# ribbon禁掉Eureka
+ribbon.eureka.enabled=false
+# 下面 如果配多个地址 用, 隔开的话是可以实现负载均衡的
+ddsc-facade-app.ribbon.listOfServers=http://192.168.3.30:6060/
+````
+
+
+
+-[使用Zuul构建API Gateway](https://blog.csdn.net/zhanglh046/article/details/78651993) 参考这个网站-还有很多内容如 文件上传等
+
+-[springCloud（15）：使用Zuul构建微服务网关-Header与文件上传和过滤器](http://blog.51cto.com/1754966750/1958684)
+
+-[Zuul(SpringCloud学习笔记一)](http://www.cnblogs.com/xd03122049/p/6036318.html) 这个网站也有正确的配置
+
+
+
+网上的一份配置
+
+https://blog.csdn.net/mn960mn/article/details/51832753
+
+````properties
+server.port=8181  
+  
+#这里的配置表示，访问/baidu/** 直接重定向到http://www.baidu.com  
+zuul.routes.baidu.path=/baidu/**  
+zuul.routes.baidu.url=http://www.baidu.com  
+  
+#反响代理配置  
+#这里的配置类似nginx的反响代理  
+#当请求/api/**会直接交给listOfServers配置的服务器处理  
+#当stripPrefix=true的时候 （http://127.0.0.1:8181/api/user/list -> http://192.168.1.100:8080/user/list）  
+#当stripPrefix=false的时候（http://127.0.0.1:8181/api/user/list -> http://192.168.1.100:8080/api/user/list）  
+zuul.routes.api.path=/api/**  
+zuul.routes.api.stripPrefix=false  
+api.ribbon.listOfServers=192.168.1.100:8080,192.168.1.101:8080,192.168.1.102:8080  
+  
+#url重写配置  
+#这里的配置，相当于访问/index/** 会直接渲染/home的请求内容(和直接请求/home效果一样), url地址不变  
+zuul.routes.index.path=/index/**  
+zuul.routes.index.url=forward:/home  
+````
+
+
+
 - []()
 - []()
 - []()

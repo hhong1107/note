@@ -514,6 +514,8 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 [12款最佳Linux命令行终端工具](http://www.vaikan.com/best-terminal-alternatives-for-linux-systems/)
 
+-[Linux如何查看CPU温度](https://blog.csdn.net/yangguangqizhi/article/details/46460599)
+
 
 
 
