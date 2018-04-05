@@ -88,6 +88,7 @@
 - [Rabbitmq学习之路2-rabbitmqctl](https://my.oschina.net/guol/blog/186445)
 - -[RabbitMQ 集群与高可用配置](http://88250.b3log.org/rabbitmq-clustering-ha)
 - -[python RabbitMQ队列使用（入门篇）](http://www.cnblogs.com/kerwinC/p/5967584.html)
+- [MQ如何快速实现流量削峰填谷](https://blog.csdn.net/u011676417/article/details/70168194)
 - []()
 - []()
 
