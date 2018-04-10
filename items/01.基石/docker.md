@@ -128,15 +128,15 @@ http://www.server110.com/docker/201411/11105.html
 - [docker容器故障致无法启动解决实例](http://www.mincoder.com/article/4045.shtml)
 - [使用Docker容器的十大误区](http://www.open-open.com/lib/view/open1463108483467.html)
 - [Docker 容器日志的那些事儿](http://blog.csdn.net/shlazww/article/details/47283617)
-  -[Docker 清理命令集锦](http://blog.csdn.net/huangjin0507/article/details/51162869)
-
--[docker 1.12.3版本搭建私有仓库，上传镜像报错：server gave HTTP response to HTTPS client”](https://www.bbsmax.com/A/A7zg22MVd4/)
-
-[使用docker运行mysql实例](http://www.jianshu.com/p/c24e3e5f5b58)
-
-[自己学Docker:6.Docker的数据持久化之数据卷容器](http://blog.csdn.net/mungo/article/details/51263870)
+- -[Docker 清理命令集锦](http://blog.csdn.net/huangjin0507/article/details/51162869)
+- -[docker 1.12.3版本搭建私有仓库，上传镜像报错：server gave HTTP response to HTTPS client”](https://www.bbsmax.com/A/A7zg22MVd4/)
+- [使用docker运行mysql实例](http://www.jianshu.com/p/c24e3e5f5b58)
+- [自己学Docker:6.Docker的数据持久化之数据卷容器](http://blog.csdn.net/mungo/article/details/51263870)
 
 
+- [5个构建第一个Java镜像的小窍门](http://dockone.io/article/2039)
+- [docker创建java环境镜像](https://blog.csdn.net/songxiuliang/article/details/68061048)
+- -[centos7安装docker并安装jdk和tomcat（常用命令）](http://www.cnblogs.com/linjiaxin/p/6690757.html)
 
 
 

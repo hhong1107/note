@@ -111,8 +111,40 @@ static {
 
   ​
 
-  ​
+  #### FastJson
 
+  -[转\]FastJSON通过SerializeFilter定制序列化](http://www.cnblogs.com/dirgo/p/5178629.html)
+
+
+  ```
+    public interface PropertyFilter extends SerializeFilter {
+        boolean apply(Object object, String propertyName, Object propertyValue);
+    }
+
+  ```
+
+  可以通过扩展实现根据object或者属性名称或者属性值进行判断是否需要序列化。例如：
+
+  ```
+      PropertyFilter filter = new PropertyFilter() {
+
+          public boolean apply(Object source, String name, Object value) {
+              if ("id".equals(name)) {
+                  int id = ((Integer) value).intValue();
+                  return id >= 100;
+              }
+              return false;
+          }
+      };
+
+      JSON.toJSONString(obj, filter); // 序列化的时候传入filter
+  ```
+
+
+
+
+
+- ​
 - [杂记--泛型与json解析（fastjson）](http://blog.csdn.net/u013583905/article/details/49281639)
 
 

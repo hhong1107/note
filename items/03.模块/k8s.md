@@ -196,6 +196,23 @@ http://blog.csdn.net/qq_35904833/article/details/77447867  连接数据库
 
 -[kubernetes1.9离线部署](http://blog.csdn.net/liu9718214/article/details/79242849)  ☆☆☆☆☆ 重点参考
 
+-[Kubernetes之kubectl常用命令](http://blog.csdn.net/xingwangc2014/article/details/51204224)☆☆☆
+
+-[安装k8s 1.9.0 实践：问题集锦](https://blog.csdn.net/zhd930818/article/details/79644903) ☆☆☆
+
+````shell
+# 有节点一直连接不上去报：Error adding network: failed to set bridge addr: "cni0" already has an IP address different from
+# 需要清理环境
+kubeadm reset
+rm -rf /var/lib/cni/flannel/* && rm -rf /var/lib/cni/networks/cbr0/* && ip link delete cni0  
+rm -rf /var/lib/cni/networks/cni0/*
+
+# 如果执行命令的时候报参数过长
+find . -name "*" -print | xargs rm -rf 
+````
+
+
+
 -[使用kubeadm安装kubernetes1.7/1.8/1.9](http://blog.csdn.net/zhuchuangang/article/details/76572157)  这个用的是阿里云的
 
 -[一键安装脚本](https://github.com/zhuchuangang/k8s-install-scripts/tree/master/kubeadm)
@@ -227,7 +244,7 @@ kubectl logs <pod_name>
 
 -[kubeadm-highavailiability - 基于kubeadm的kubernetes高可用集群部署，支持v1.9.x和v1.7.x版本以及v1.6.x版本](https://github.com/cookeem/kubeadm-ha/blob/master/README_CN.md)
 
-☆☆☆ -[Kubernetes之kubectl常用命令](http://blog.csdn.net/xingwangc2014/article/details/51204224)
+
 
 -[Kubernetes系统常见运维技巧](http://blog.csdn.net/horsefoot/article/details/51594840)
 

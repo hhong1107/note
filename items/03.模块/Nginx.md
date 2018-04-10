@@ -72,6 +72,8 @@ service nginx status 	# 查看状态
 
 [Nginx实现高并发优化](http://blog.csdn.net/atai2002/article/details/76041518)
 
+-[nginx实现动态分离,解决css和js等图片加载问题](http://www.cnblogs.com/sz-jack/p/5206159.html)
+
 ##### 转发真实IP相关
 
 -[学习笔记 - Nginx在多层代理下获取真实客户端IP地址](http://www.cnblogs.com/harryc/p/6361892.html)

@@ -45,10 +45,18 @@ public class Swagger2 {
 
 ```
 - [访问](http://localhost:3334/swagger-ui.html)
-= 类上也要加上 @RequestMapping(value="/account")
+  = 类上也要加上 @RequestMapping(value="/account")
 ----
 - [SpringBoot之springfox  Swagger](http://my.oschina.net/wangnian/blog/666017)
+
 - [Spring Boot中使用Swagger2构建强大的RESTful API文档](http://blog.didispace.com/springbootswagger2/)
+
 - [spring-boot-swagger2 使用手册](https://gumutianqi1.gitbooks.io/specification-doc/content/tools-doc/spring-boot-swagger2-guide.html)
+
+- -[如何在生产环境禁用Swagger](https://blog.csdn.net/goldenfish1919/article/details/78280051)
+
+  -[Swagger环境搭建之非依赖代码法](https://blog.csdn.net/wantnrun/article/details/52754252)
+
 - []()
+
 - []()
