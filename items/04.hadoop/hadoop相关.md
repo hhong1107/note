@@ -65,3 +65,48 @@ ssh-keygen -t rsa -P “”
 cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 ````
 
+
+
+
+
+### 动态增删节点
+
+-[hadoop2.7 动态新增节点和删除节点](https://blog.csdn.net/Mark_LQ/article/details/53393081)
+
+-[Hadoop热添加删除节点（含Hbase）](https://my.oschina.net/junfrank/blog/291023) 
+
+-[HDFS和HBASE动态增加和减少节点](https://blog.csdn.net/u011538954/article/details/69666612)
+
+-[hadoop2.7 动态新增节点和删除节点](https://blog.csdn.net/Mark_LQ/article/details/53393081)
+
+-[Hadoop/HBase集群移除节点](https://blog.csdn.net/u010137562/article/details/38470467)
+
+-[hdfs以及hbase动态增加和删除节点](http://www.cnblogs.com/learn21cn/p/6196183.html)
+
+
+
+````shell
+### 增加节点
+### hadoop 
+# (1)启动datanode进程   
+sbin/hadoop-daemon.sh start datanode  
+# (2)启动nodemanager进程   
+sbin/yarn-daemon.sh start nodemanager   
+# (3)均衡block   
+sbin/start-balancer.sh 
+
+### hbase增加Region Servers  
+# (1)  HMaster节点的配置regionservers  
+[root@node01 hbase-1.3.0]# cat conf/regionservers  
+node02  
+node03  
+node04  
+  
+  
+# (2)  在新节点中通过下面命令启动HRegionServer:  
+hbase-daemon.sh start regionserver  
+# 在新节点上面
+hbase shell
+balance_switch true
+````
+

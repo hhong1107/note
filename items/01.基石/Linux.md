@@ -161,6 +161,21 @@ sed
  
 ```
 
+### 时间同步
+
+-[Linux同步网络时间](https://blog.csdn.net/weiyuefei/article/details/71514133)
+
+````shell
+yum install ntpdate
+ntpdate ntp.api.bz
+# 中国国家授时中心：210.72.145.44
+# NTP服务器(上海) ：ntp.api.bz
+
+ntpdate -u 210.72.145.44 :网络时间同步命令
+#  注意：若不加上-u参数， 会出现以下提示：no server suitable for synchronization found
+
+````
+
 
 
 ### 更改和设置Hostname

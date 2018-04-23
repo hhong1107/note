@@ -65,3 +65,9 @@ public class SpringMVCConf {
 返回对象上加
 @JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 ```
+
+
+
+-[spring注解式参数校验](https://blog.csdn.net/jinzhencs/article/details/51682830)
+
+-[SpringMVC参数校验，包括JavaBean和基本类型的校验](https://blog.csdn.net/tianyaleixiaowu/article/details/71173059)
