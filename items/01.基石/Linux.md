@@ -506,6 +506,55 @@ q	F10	Quit htop	结束htop
 
 
 
+### Maven安装
+
+-[使用Nexus搭建maven私有仓库](https://www.jianshu.com/p/9740778b154f)
+
+http://192.168.3.181:8081 
+
+admin  默认是admin123  改为 settling.xml 中的了
+
+````shell
+http://192.168.3.235:9988/nexus/content/repositories/releases/
+http://ddsc-maven:8081/repository/maven-releases/
+
+
+http://192.168.3.235:9988/nexus/content/repositories/snapshots/
+http://ddsc-maven:8081/repository/maven-snapshots/
+````
+
+
+
+### 监控温度
+
+-[如何在 Ubuntu 中检查笔记本 CPU 的温度](https://www.linuxidc.com/Linux/2015-06/119201.htm)  参考这个网站
+
+````shell
+sudo apt-get install lm-sensors hddtemp
+接着开始检测硬件传感器：
+
+sudo sensors-detect
+要确保已经工作，运行下面的命令：
+
+sensors
+它会给出下面这样的输出：
+
+acpitz-virtual-0
+Adapter:Virtual device
+temp1:+43.0°C (crit =+98.0°C)
+coretemp-isa-0000
+Adapter: ISA adapter
+Physical id 0:+44.0°C (high =+100.0°C, crit =+100.0°C)
+Core0:+41.0°C (high =+100.0°C, crit =+100.0°C)
+Core1:+40.0°C (high =+100.0°C, crit =+100.0°C)
+如果一切看上去没问题，使用下面的命令安装Psensor：
+
+sudo apt-get install psensor
+
+````
+
+
+
 
 
 ## 参考网站
