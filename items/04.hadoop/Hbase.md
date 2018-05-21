@@ -70,8 +70,7 @@
 [Hbase教程](http://www.yiibai.com/hbase/hbase_delete_data.html)
 
 - [hbase热点问题(数据倾斜)解决方案---rowkey散列和预分区设计](http://blog.csdn.net/w1014074794/article/details/73140489)
-
-
+- [HBase 默认配置](https://blog.csdn.net/u011414200/article/details/50427529)
 
 #### 数据迁移相关
 
@@ -154,7 +153,7 @@ hadoop dfsadmin -safemode leave
 
 [hadoop异常大全](http://blog.csdn.net/zgc625238677/article/details/17241467)
 
-###### org.apache.hadoop.hbase.MasterNotRunningException: Retried 7 times
+org.apache.hadoop.hbase.MasterNotRunningException: Retried 7 times
 
 这个异常一般是Hadoop没启动好查看Hadoop启动的模式和jar包是否一致等。注意看Hadoop的启动日志
 
