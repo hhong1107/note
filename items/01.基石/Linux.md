@@ -580,6 +580,8 @@ Seafile - 自己动手搭建个人/团队/公司专属私有文件同步服务 (
 
 -[Linux如何查看CPU温度](https://blog.csdn.net/yangguangqizhi/article/details/46460599)
 
+-[Linux临时、永久修改DNS的方法](http://www.jb51.net/LINUXjishu/181155.html)
+
 
 
 

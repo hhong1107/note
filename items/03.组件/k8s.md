@@ -108,6 +108,9 @@
 - [gitlab上的kubernetes设配springcloud](https://github.com/fabric8io/spring-cloud-kubernetes) gitlab上的kubernetes设配springcloud
   [中文社区](https://www.kubernetes.org.cn/)
 
+-[Kubernetes之kubectl常用命令使用指南:2:故障排查](https://blog.csdn.net/liumiaocn/article/details/73925301)
+-[Kubernetes中Service机制](https://www.jianshu.com/p/bbb673e79c3e)
+-[如何在Kubernetes中暴露服务访问](https://segmentfault.com/a/1190000007990723)
 
 ----
 
