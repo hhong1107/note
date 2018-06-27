@@ -295,9 +295,55 @@ docker run  --net=host -v /tmp/fincar-logs:/logs -p 9102:9102 --name='fincar-acc
 
 
 
+###### 搭建仓库UI管理台
 
+-[（一）Harbor安装 -- 企业级Registry仓库](https://www.cnblogs.com/huangjc/p/6266564.html)
 
+-[Harbor使用 -- 修改80端口](https://www.cnblogs.com/huangjc/p/6420355.html)
 
+> 按照上面的网站 执行命令 systemctl restart docker.service
+>
+> > Warning: docker.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+> > Job for docker.service failed because the control process exited with error code. See "systemctl status docker.service" and "journalctl -xe" for details.
+> > [root@k8s-node01 harbor]# systemctl daemon-reload
+> > [root@k8s-node01 harbor]# systemctl restart docker.service
+> > Job for docker.service failed because the control process exited with error code. See "systemctl status docker.service" and "journalctl -xe" for details.
+>
+> 失败后执行看错误描述 主要是  新加的  --insecure-registry=ddsc.dock.registry:1180 有问题
+>
+> 
+>
+> > [root@k8s-node01 harbor]# systemctl status docker.service
+> > ● docker.service - Docker Application Container Engine
+> >    Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+> >    Active: failed (Result: start-limit) since 五 2018-06-22 15:19:16 CST; 6s ago
+> >
+> >      Docs: https://docs.docker.com
+> >   Process: 4640 ExecStart=/usr/bin/dockerd --insecure-registry=ddsc.dock.registry:1180 (code=exited, status=1/FAILURE)
+> >  Main PID: 4640 (code=exited, status=1/FAILURE)
+>
+> 
+>
+> >  vim /var/log/messages
+> >
+> > Jun 22 15:08:08 k8s-node01 systemd: docker.service: main process exited, code=exited, status=1/FAILURE
+> > Jun 22 15:08:08 k8s-node01 systemd: Failed to start Docker Application Container Engine.
+> > Jun 22 15:08:08 k8s-node01 systemd: Unit docker.service entered failed state.
+> > Jun 22 15:08:08 k8s-node01 systemd: docker.service failed.
+> > Jun 22 15:08:09 k8s-node01 systemd: docker.service holdoff time over, scheduling restart.
+> > Jun 22 15:08:09 k8s-node01 systemd: Starting Docker Application Container Engine...
+> > Jun 22 15:08:09 k8s-node01 dockerd: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [192.168.3.193:1180], from file: [ddsc.dock.registry:5000])
+> >
+> > 看的出是和 /etc/docker/daemon.json 这边有冲突
+>
+> 将其改回去后执行
+>
+> > [root@k8s-node01 harbor]# systemctl daemon-reload
+> > [root@k8s-node01 harbor]# systemctl restart docker.service
+>
+> 可以启动
+
+- 到目前还没有安装成功
 
 
 

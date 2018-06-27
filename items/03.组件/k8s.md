@@ -270,5 +270,360 @@ kubectl delete node 节点名字
 
 
 
+#### [kubernetes-dashboard安装](https://www.cnblogs.com/netsa/p/8376526.html)
 
 
+
+````shell
+docker pull registry.docker-cn.com/kubernetesdashboarddev/kubernetes-dashboard-amd64:head
+
+````
+
+- 文件一:dashboard.yaml：
+
+````yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: kubernetes-dashboard
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-dashboard
+  labels:
+    k8s-app: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: kubernetes-dashboard
+  namespace: kube-system
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kubernetes-dashboard
+  namespace: kube-system
+  labels:
+    k8s-app: kubernetes-dashboard
+    kubernetes.io/cluster-service: "true"
+    addonmanager.kubernetes.io/mode: Reconcile
+spec:
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-dashboard
+  template:
+    metadata:
+      labels:
+        k8s-app: kubernetes-dashboard
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ''
+    spec:
+      serviceAccountName: kubernetes-dashboard
+      containers:
+      - name: kubernetes-dashboard
+        image: registry.docker-cn.com/kubernetesdashboarddev/kubernetes-dashboard-amd64:head
+        resources:
+          limits:
+            cpu: 100m
+            memory: 300Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 9090
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 9090
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+      tolerations:
+      - key: "CriticalAddonsOnly"
+        operator: "Exists"
+````
+
+
+
+- 文件二：dashboard-svc.yaml文件
+
+````yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubernetes-dashboard
+  namespace: kube-system
+  labels:
+    k8s-app: kubernetes-dashboard
+    kubernetes.io/cluster-service: "true"
+    addonmanager.kubernetes.io/mode: Reconcile
+spec:
+  selector:
+    k8s-app: kubernetes-dashboard
+  type: NodePort
+  ports:
+  - port: 9090
+    targetPort: 9090
+    nodePort: 32017
+````
+
+- 部署：
+
+````shell
+kubectl create -f dashboard.yaml
+kubectl create -f dashboard-svc.yaml
+````
+
+- 访问：32017端口 就是前面配置的咯
+
+
+#### Kubernetes监控(Heapster)
+
+参考网站：https://www.jianshu.com/p/3f803cd02d74
+
+````shell
+# 运行 yaml 文件
+kubectl create -f http://res.yinnote.com/kubernetes/heapster/1.5.1/heapster-rbac.yaml
+kubectl create -f http://res.yinnote.com/kubernetes/heapster/1.5.1/influxdb/heapster.yaml
+
+# 安装 InfluxDB
+kubectl create -f http://res.yinnote.com/kubernetes/heapster/1.5.1/influxdb/influxdb.yaml
+
+# 安装Grafana
+kubectl create -f http://res.yinnote.com/kubernetes/heapster/1.5.1/influxdb/grafana.yaml
+
+# 最后访问 31235
+
+````
+
+
+
+#### yaml示例
+
+
+
+##### pod yaml
+
+````yaml
+
+apiVersion: v1 #指定api版本，此值必须在kubectl apiversion中  
+kind: Pod #指定创建资源的角色/类型  
+metadata: #资源的元数据/属性  
+  name: web04-pod #资源的名字，在同一个namespace中必须唯一  
+  labels: #设定资源的标签，详情请见http://blog.csdn.net/liyingke112/article/details/77482384
+    k8s-app: apache  
+    version: v1  
+    kubernetes.io/cluster-service: "true"  
+  annotations:            #自定义注解列表  
+    - name: String        #自定义注解名字  
+spec:#specification of the resource content 指定该资源的内容  
+  restartPolicy: Always #表明该容器一直运行，默认k8s的策略，在此容器退出后，会立即创建一个相同的容器  
+  nodeSelector:     #节点选择，先给主机打标签kubectl label nodes kube-node1 zone=node1  
+    zone: node1  
+  containers:  
+  - name: web04-pod #容器的名字  
+    image: web:apache #容器使用的镜像地址  
+    imagePullPolicy: Never #三个选择Always、Never、IfNotPresent，每次启动时检查和更新（从registery）images的策略，
+                           # Always，每次都检查
+                           # Never，每次都不检查（不管本地是否有）
+                           # IfNotPresent，如果本地有就不检查，如果没有就拉取
+    command: ['sh'] #启动容器的运行命令，将覆盖容器中的Entrypoint,对应Dockefile中的ENTRYPOINT  
+    args: ["$(str)"] #启动容器的命令参数，对应Dockerfile中CMD参数  
+    env: #指定容器中的环境变量  
+    - name: str #变量的名字  
+      value: "/etc/run.sh" #变量的值  
+    resources: #资源管理，请求请见http://blog.csdn.net/liyingke112/article/details/77452630
+      requests: #容器运行时，最低资源需求，也就是说最少需要多少资源容器才能正常运行  
+        cpu: 0.1 #CPU资源（核数），两种方式，浮点数或者是整数+m，0.1=100m，最少值为0.001核（1m）
+        memory: 32Mi #内存使用量  
+      limits: #资源限制  
+        cpu: 0.5  
+        memory: 32Mi  
+    ports:  
+    - containerPort: 80 #容器开发对外的端口
+      name: httpd  #名称
+      protocol: TCP  
+    livenessProbe: #pod内容器健康检查的设置，详情请见http://blog.csdn.net/liyingke112/article/details/77531584
+      httpGet: #通过httpget检查健康，返回200-399之间，则认为容器正常  
+        path: / #URI地址  
+        port: 80  
+        #host: 127.0.0.1 #主机地址  
+        scheme: HTTP  
+      initialDelaySeconds: 180 #表明第一次检测在容器启动后多长时间后开始  
+      timeoutSeconds: 5 #检测的超时时间  
+      periodSeconds: 15  #检查间隔时间  
+      #也可以用这种方法  
+      #exec: 执行命令的方法进行监测，如果其退出码不为0，则认为容器正常  
+      #  command:  
+      #    - cat  
+      #    - /tmp/health  
+      #也可以用这种方法  
+      #tcpSocket: //通过tcpSocket检查健康   
+      #  port: number   
+    lifecycle: #生命周期管理  
+      postStart: #容器运行之前运行的任务  
+        exec:  
+          command:  
+            - 'sh'  
+            - 'yum upgrade -y'  
+      preStop:#容器关闭之前运行的任务  
+        exec:  
+          command: ['service httpd stop']  
+    volumeMounts:  #详情请见http://blog.csdn.net/liyingke112/article/details/76577520
+    - name: volume #挂载设备的名字，与volumes[*].name 需要对应    
+      mountPath: /data #挂载到容器的某个路径下  
+      readOnly: True  
+  volumes: #定义一组挂载设备  
+  - name: volume #定义一个挂载设备的名字  
+    #meptyDir: {}  
+    hostPath:  
+      path: /opt #挂载设备类型为hostPath，路径为宿主机下的/opt,这里设备类型支持很多种  
+````
+
+
+
+
+
+
+
+### 日志
+
+#### dns无法启动
+
+
+
+````shell
+systemctl stop kubelet
+systemctl stop docker.service
+systemctl start docker.service
+systemctl restart docker.service
+systemctl status docker.service
+systemctl start  docker 
+systemctl daemon-reload
+systemctl start  kubelet
+````
+
+> 注意看/var/log/message 的日志
+>
+> 里面显示了无法删除文件
+>
+> 然后看了下有一些dead的容器
+>
+> 参考下面的找到这些文件的进程把他kill掉有dead的容器就自动消失了 k8s就可以自动部署了
+>
+> > Jun 25 17:08:31 k8s-master dockerd: time="2018-06-25T17:08:31.846844481+08:00" level=error msg="Error removing mounted layer d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f: remove /var/lib/docker/overlay/d45dacde14e716217e8a52dc7b9500f3d1addff09a4b035a4974af660f7ccc52/merged: device or resource busy"
+> > Jun 25 17:08:31 k8s-master dockerd: time="2018-06-25T17:08:31.846951090+08:00" level=error msg="Handler for DELETE /v1.30/containers/d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f returned error: driver \"overlay\" failed to remove root filesystem for d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f: remove /var/lib/docker/overlay/d45dacde14e716217e8a52dc7b9500f3d1addff09a4b035a4974af660f7ccc52/merged: device or resource busy"
+> > Jun 25 17:08:31 k8s-master kubelet: E0625 17:08:31.847421   16139 remote_runtime.go:246] RemoveContainer "d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f" from runtime service failed: rpc error: code = Unknown desc = failed to remove container "d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f": Error response from daemon: driver "overlay" failed to remove root filesystem for d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f: remove /var/lib/docker/overlay/d45dacde14e716217e8a52dc7b9500f3d1addff09a4b035a4974af660f7ccc52/merged: device or resource busy
+> > Jun 25 17:08:31 k8s-master kubelet: E0625 17:08:31.847513   16139 kuberuntime_gc.go:126] Failed to remove container "d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f": rpc error: code = Unknown desc = failed to remove container "d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f": Error response from daemon: driver "overlay" failed to remove root filesystem for d670175bf0854928fac55d97d1590a16209c3005a8005731a560155b7c8f916f: remove /var/lib/docker/overlay/d45dacde14e716217e8a52dc7b9500f3d1addff09a4b035a4974af660f7ccc52/merged: device or resource busy
+> > Jun 25 17:08:32 k8s-master dockerd: time="2018-06-25T17:08:32.362603830+08:00" level=error msg="Error removing mounted layer 1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a: remove /var/lib/docker/overlay/1df383fb6d7ba842e5dd7fd8146e753766dce05fda4c04c3b1f6a288d79418b8/merged: device or resource busy"
+> > Jun 25 17:08:32 k8s-master dockerd: time="2018-06-25T17:08:32.362698701+08:00" level=error msg="Handler for DELETE /v1.30/containers/1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a returned error: driver \"overlay\" failed to remove root filesystem for 1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a: remove /var/lib/docker/overlay/1df383fb6d7ba842e5dd7fd8146e753766dce05fda4c04c3b1f6a288d79418b8/merged: device or resource busy"
+> > Jun 25 17:08:32 k8s-master kubelet: E0625 17:08:32.363132   16139 remote_runtime.go:246] RemoveContainer "1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a" from runtime service failed: rpc error: code = Unknown desc = failed to remove container "1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a": Error response from daemon: driver "overlay" failed to remove root filesystem for 1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a: remove /var/lib/docker/overlay/1df383fb6d7ba842e5dd7fd8146e753766dce05fda4c04c3b1f6a288d79418b8/merged: device or resource busy
+> > Jun 25 17:08:32 k8s-master kubelet: E0625 17:08:32.363169   16139 kuberuntime_gc.go:126] Failed to remove container "1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a": rpc error: code = Unknown desc = failed to remove container "1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a": Error response from daemon: driver "overlay" failed to remove root filesystem for 1a0e3db6ac7059243abecdd7a7848b1b667d3e6ab57859035c0c7850c4f9e74a: remove /var/lib/docker/overlay/1df383fb6d7ba842e5dd7fd8146e753766dce05fda4c04c3b1f6a288d79418b8/merged: device or resource busy
+
+
+
+
+
+> 
+>
+> [Docker删除DEAD状态的容器时报错](https://blog.csdn.net/xl_lx/article/details/78530908)
+>
+> 我使用的这个方法起作用了。
+>
+> I had the following error when removing a dead container (docker 17.06.1-ce on CentOS 7):
+>
+> ```
+> Error response from daemon: driver "overlay" failed to remove root filesystem for <some-id>: 
+>
+> ```
+>
+> ```
+> remove /var/lib/docker/overlay/<some-id>/merged: device or resource busy
+>
+> ```
+>
+> Here is how I fixed it:
+>
+> **1.** Check which other processes are also using docker resources
+>
+> $ grep docker /proc/*/mountinfo
+>
+> which outputs something like this, where the number after /proc/ is the pid:
+>
+> ```
+> /proc/10001/mountinfo:179...
+>
+> ```
+>
+> ```
+> /proc/10002/mountinfo:149...
+>
+> ```
+>
+> ```
+> /proc/12345/mountinfo:159 149 0:36 / /var/lib/docker/overlay/...
+>
+> ```
+>
+> **2.** Check the process name of the above pid
+>
+> ```
+> $ ps -p 10001 -o comm=
+>
+> ```
+>
+> ```
+> dockerd
+>
+> ```
+>
+> ```
+> $ ps -p 10002 -o comm=
+>
+> ```
+>
+> ```
+> docker-containe
+>
+> ```
+>
+> ```
+> $ ps -p 12345 -o comm=
+>
+> ```
+>
+> ```
+> nginx   <<<-- This is suspicious!!!
+>
+> ```
+>
+> So, nginx with pid 12345 seems to also be using /var/lib/docker/overlay/..., which is why we cannot remove the related container and get the device or resource busy error. (See [here](https://github.com/moby/moby/issues/27381) for a discussion on how nginx shares the same mount namespace with docker containers thus prevents its deletion.)
+>
+> **3.** Stop nginx and then I can remove the container successfully.
+>
+> ```
+> $ sudo service nginx stop
+>
+> $ docker rm <container-id>
+>
+> ```
+
+
+
+#### 无法获取到dns配置
+
+- 测试环境链接不到datanode1
+
+- 分析
+
+  > 1. 前一日由于194机器挂掉过导致k8s的dns跑到了别的机器上
+  > 2. docker启动的时候默认是会把机器的dns配置同步进去的但是那台新的机器上之前的dns配置有问题不是指向的192.168.3.1 所以他同步进去的就不是对的
+  > 3. 删除掉dns的pod让k8s自动重新部署一个就可以了
+  >
+  > > 如果docker run时不含`--dns=IP_ADDRESS..., --dns-search=DOMAIN..., or --dns-opt=OPTION...`参数，docker daemon会将copy本主机的/etc/resolv.conf，然后对该copy进行处理（将那些/etc/resolv.conf中ping不通的nameserver项给抛弃）,处理完成后留下的部分就作为该容器内部的/etc/resolv.conf。因此，如果你想利用宿主机中的/etc/resolv.conf配置的nameserver进行域名解析，那么你需要宿主机中该dns service配置一个宿主机内容器能ping通的IP。
+  > >
+  > > [docker container DNS配置介绍和源码分析](https://blog.csdn.net/waltonwang/article/details/54098592)
