@@ -82,3 +82,23 @@ service nginx status 	# 查看状态
 
 -[nginx 如何配置来获取用户真实IP](http://blog.csdn.net/bigtree_3721/article/details/72820081)
 
+
+
+
+
+##### 缓存
+
+````nginx
+# 启用缓存
+location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|js|css)$ {
+  #设置缓存上面定义的后缀文件缓存到浏览器的生存时间
+  expires   3d;
+}
+
+# 禁用缓存
+location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|js|css)$ {
+ #禁止缓存，每次都从服务器请求
+  add_header Cache-Control no-store;
+}
+````
+
