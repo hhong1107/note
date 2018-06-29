@@ -12,7 +12,7 @@
 - [Spring定时任务的几种实现](http://gong1208.iteye.com/blog/1773177)
 - [ 定时任务框架Quartz浅谈](http://blog.csdn.net/ang_dd/article/details/12032159)
 - [Spring集成Quartz定时任务框架介绍和Cron表达式详解](http://www.cnblogs.com/obullxl/archive/2011/07/10/spring-quartz-cron-integration.html)
-- []()
+- [w3c](https://www.w3cschool.cn/quartz_doc/quartz_doc-7vix2d9n.html)
 - []()
 - []()
 - []()
@@ -71,6 +71,51 @@
 
               每天的0点、13点、18点、21点都执行一次：0 0 0,13,18,21 * * ?
 
+
+#### 数据库连接异常
+
+数据库连接断开后就无法恢复导致了狂刷日志热后把服务器硬盘塞满了
+
+spring boot 默认使用了Tomcat的连接池 而Tomcat使用的是dbcp  dbcp没有回收连接的功能导致的
+
+````xml
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+			<!--<version>1.1.1</version>-->
+			<!--<version>1.0.1-SNAPSHOT</version> 1.0.0 不支持分页-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.tomcat</groupId>
+					<artifactId>tomcat-jdbc</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+````
+
+排除掉Tomcat的  
+
+自己配置的druid 没有被扫描到 加入以下注解到 application
+
+````java
+@Import(ScheduleRepositoryConf.class)
+
+````
+
+
+
+> # HikariCP
+>
+> HikariCP是目前号称最好的连接池，没有之一。不过tomcat连接池有tomcat做为其后盾保障， 文档资料齐全，也更加持久稳妥。这里不讲解 HikariCP，有兴趣可访问https://github.com/brettwooldridge/HikariCP
+
+
+
+-[SpringBoot切换数据库连接池](https://www.cnblogs.com/fjdingsd/p/5273187.html)
+
+-[Tomcat内置的数据库连接池(DBCP)](https://www.cnblogs.com/fjdingsd/p/5273187.html)
+
+-[数据库连接池在TOMCAT中的几种配置方法](https://www.cnblogs.com/jay36/p/7684000.html)
 
 
 
