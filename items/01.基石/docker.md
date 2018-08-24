@@ -262,6 +262,26 @@ docker images|grep none|awk '{print $3 }'|xargs docker rmi
 
 
 
+#### 查看容器状态
+
+````shell
+docker stats 容器id
+````
+
+
+
+##### 容器中查看java内存大小
+
+````
+# 最简单粗暴的方法是：
+docker run --security-opt seccomp:unconfined ...
+
+````
+
+https://blog.csdn.net/kinginblue/article/details/78078028
+
+
+
 
 
 docker run  --net=host -v /home/fincar/tmp/log3:/logs -p 9100:9100 --name='fincar-account-test'   fincar-account:test  '--server.port=9100'   '/logs/nohup.log 2>&1 &'
@@ -326,15 +346,15 @@ docker run  --net=host -v /tmp/fincar-logs:/logs -p 9102:9102 --name='fincar-acc
 >
 > >  vim /var/log/messages
 > >
-> > Jun 22 15:08:08 k8s-node01 systemd: docker.service: main process exited, code=exited, status=1/FAILURE
-> > Jun 22 15:08:08 k8s-node01 systemd: Failed to start Docker Application Container Engine.
-> > Jun 22 15:08:08 k8s-node01 systemd: Unit docker.service entered failed state.
-> > Jun 22 15:08:08 k8s-node01 systemd: docker.service failed.
-> > Jun 22 15:08:09 k8s-node01 systemd: docker.service holdoff time over, scheduling restart.
-> > Jun 22 15:08:09 k8s-node01 systemd: Starting Docker Application Container Engine...
-> > Jun 22 15:08:09 k8s-node01 dockerd: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [192.168.3.193:1180], from file: [ddsc.dock.registry:5000])
+> >  Jun 22 15:08:08 k8s-node01 systemd: docker.service: main process exited, code=exited, status=1/FAILURE
+> >  Jun 22 15:08:08 k8s-node01 systemd: Failed to start Docker Application Container Engine.
+> >  Jun 22 15:08:08 k8s-node01 systemd: Unit docker.service entered failed state.
+> >  Jun 22 15:08:08 k8s-node01 systemd: docker.service failed.
+> >  Jun 22 15:08:09 k8s-node01 systemd: docker.service holdoff time over, scheduling restart.
+> >  Jun 22 15:08:09 k8s-node01 systemd: Starting Docker Application Container Engine...
+> >  Jun 22 15:08:09 k8s-node01 dockerd: unable to configure the Docker daemon with file /etc/docker/daemon.json: the following directives are specified both as a flag and in the configuration file: insecure-registries: (from flag: [192.168.3.193:1180], from file: [ddsc.dock.registry:5000])
 > >
-> > 看的出是和 /etc/docker/daemon.json 这边有冲突
+> >  看的出是和 /etc/docker/daemon.json 这边有冲突
 >
 > 将其改回去后执行
 >
