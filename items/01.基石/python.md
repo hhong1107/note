@@ -21,6 +21,18 @@ $ sudo pip install --upgrade virtualenv
 - [ubuntu 安装pip](http://blog.csdn.net/lmmilove/article/details/44470585)
 
 
+##### pip安装超时问题
+
+> pip安装时出现error: The read operation timed out时
+>
+> 可加 --default-timeout=100解决问题
+>
+> 例如:
+>
+> pip --default-timeout=100 install scrapy
+
+
+
 
 
 
