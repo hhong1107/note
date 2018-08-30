@@ -198,6 +198,26 @@ hostnamectl --static set-hostname k8s-master
 
 
 
+### 推出登录用户
+
+````shell
+# 查看系统在线用户
+who
+
+14:30:26 up 38 days, 21:22,  3 users,  load average: 0.00, 0.01, 0.05
+USER    TTY      FROM              LOGIN@  IDLE  JCPU  PCPU WHAT
+root    pts/0    162.16.16.155    14:30    0.00s  0.07s  0.05s w
+root    pts/1    162.16.16.155    14:30  12.00s  0.01s  0.01s -bash
+
+# 查看哪个属于此时自己的终端（我开了两个连接）
+who am i
+
+# pkill掉连接的终端
+ pkill -kill -t pts/1
+````
+
+-[Linux结束其他ssh登录用户](https://blog.csdn.net/Hay54/article/details/78522319)
+
 ### 其他命令
 
 - ​

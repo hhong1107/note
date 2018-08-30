@@ -456,7 +456,6 @@ cd /etc/mysql/conf.d
 vim docker.cnf
 
 
-
 ````
 
 
@@ -467,6 +466,18 @@ http://blog.csdn.net/achilles12345/article/details/47122963
 
 ````shell
 apt-get update
-apt-get install vim 
+apt-get install vim 		
 ````
+
+
+
+#### 修改时区
+
+````shell
+apt-get install tzdata
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+echo "Asia/Shanghai" > /etc/timezone
+````
+
+https://blog.csdn.net/u012373815/article/details/52782807
 

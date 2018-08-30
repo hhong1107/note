@@ -65,7 +65,7 @@
 - [Ganglia监控Hadoop与HBase集群](https://yq.aliyun.com/articles/38824)
 - [ganglia安装和配置监控hadoop，hbase，spark](http://blog.csdn.net/haoxiaoyan/article/details/52883032)
 - [配置 HBase 的监控工具 ganglia](http://www.jikexueyuan.com/course/2536.html)
--[hbase操作（shell 命令，如建表，清空表，增删改查）以及 hbase表存储结构和原理](http://blog.csdn.net/longshenlmj/article/details/48317567)
+  -[hbase操作（shell 命令，如建表，清空表，增删改查）以及 hbase表存储结构和原理](http://blog.csdn.net/longshenlmj/article/details/48317567)
 
 [Hbase教程](http://www.yiibai.com/hbase/hbase_delete_data.html)
 
@@ -163,16 +163,13 @@ org.apache.hadoop.hbase.MasterNotRunningException: Retried 7 times
 
 - [在hbase shell中解决ERROR: org.apache.hadoop.hbase.MasterNotRunningException: Retried 7 times](http://www.mincoder.com/article/2218.shtml)
 - []()
-
-###### ERROR: org.apache.hadoop.hbase.PleaseHoldException: Master is initializing
+- ERROR: org.apache.hadoop.hbase.PleaseHoldException: Master is initializing
 
 http://www.th7.cn/db/nosql/201611/212676.shtml
 
 注意看hbase 的 master和子节点 的日志，一般来讲可能是启动的时候就已经异常了
 
-
-
-######  WARN org.apache.hadoop.hbase.regionserver.HRegionServer: Unable to connect to master. Retrying. Error was: 
+- WARN org.apache.hadoop.hbase.regionserver.HRegionServer: Unable to connect to master. Retrying. Error was:
 
  WARN org.apache.hadoop.hbase.regionserver.HRegionServer: Unable to connect to master. Retrying. Error was: 
 java.net.SocketException: 无效的参数 
@@ -183,15 +180,13 @@ http://www.cnblogs.com/zhanggl/p/3985114.html
 
 http://www.linuxidc.com/Linux/2012-03/56343.htm
 
-###### File /user/ha/firstTest could only be replicated to 0 nodes, instead of 1
+- File /user/ha/firstTest could only be replicated to 0 nodes, instead of 1
 
 http://f.dataguru.cn/thread-17327-1-1.html
 
  [hadoop伪分布式下 无法启动datanode的原因及could only be replicated to > 0 nodes, instead of 1的错误](http://blog.csdn.net/hackerwin7/article/details/19973045)
 
-
-
-###### 服务器时间问题
+- 服务器时间问题
 
 如果机器之间时间相差太大会不能启动
 
@@ -414,6 +409,90 @@ hadoop dfs -put test /hbase/test
 [HDFS和HBASE动态增加和减少节点](http://blog.csdn.net/clark_xu/article/details/69666612)
 
 []
+
+
+
+#### 201806断电
+
+- 一定要确认关闭防火墙
+
+  前面因为没有关闭防火墙导致了各种问题 比如无法读取hbase.version
+
+- 离开安全模式
+
+  错误Name node is in safe mode的解决方法
+
+  bin/hadoop dfsadmin -safemode leave   离开安全模式
+
+- ERROR: Can't get master address from ZooKeeper; znode data == null
+
+  zookeeper 和 hbase 的 hbase-site.xml 配置不一样
+
+    <property>
+
+  ​    <name>hbase.zookeeper.property.dataDir</name>
+
+  ​    <value>/home/user88/zk_data</value>
+
+    </property>
+
+    https://blog.csdn.net/whbo111/article/details/46453143
+
+  ​     <property>
+
+  ​        <name>hbase.zookeeper.property.dataDir</name>
+
+  ​        <value>/home/hd01/data/hbase2</value>
+
+  ​    </property>
+
+- 后面因为删除了不该删除的数据导致hbase起来以后无法看到表
+
+  > ​	create 'account','account_info'
+  > create 'app_message','message_info'
+  > create 'bank_card','bank_card_info'
+  > create 'customer','customer_info'
+  > create 'marketing_sign','sign_info'
+  > create 'settle_account_asset','asset_image'
+  > create 'settle_current_income','images','record'
+  > create 'settle_invest_income','income_day','invest_asset'
+  > create 'system_error_msg','error_info'
+  > create 'trade_account','trade_account_info'
+  > create 'trade_invest','invest_info'
+  > create 'trade_order','order_info'
+  > create 'trade_payment','payment_info'
+  > create 'trade_recharge','recharge_info'
+  > create 'trade_withdraw','withdraw_info'
+  > create 'logPojo','logPojoInfo'
+  >
+  >
+  > ## 20180604 数据异常后删除zk中的表记录
+  >
+  > ZKCli.sh
+  > [zk: localhost:2181(CONNECTED) 10] ls /hbase/table
+  > [hbase:meta, settle_invest_income, bank_card, hbase:namespace, settle_account_asset, system_error_msg, trade_account, marketing_sign, 
+  > trade_recharge, trade_invest, trade_order, trade_withdraw, logPojo, trade_payment, analytics_demo, text, app_message, settle_current_income, document_demo, account, customer]
+  > [zk: localhost:2181(CONNECTED) 11] rmr /hbase/table/account
+  >
+  > rmr /hbase/table/bank_card
+  > rmr /hbase/table/customer
+  > rmr /hbase/table/marketing_sign
+  > rmr /hbase/table/settle_account_asset
+  > rmr /hbase/table/settle_current_income
+  > rmr /hbase/table/settle_invest_income
+  > rmr /hbase/table/system_error_msg
+  > rmr /hbase/table/trade_account
+  > rmr /hbase/table/trade_invest
+  > rmr /hbase/table/trade_order
+  > rmr /hbase/table/trade_payment
+  > rmr /hbase/table/trade_recharge
+  > rmr /hbase/table/trade_withdraw
+  > rmr /hbase/table/logPojo
+  >
+
+
+
+
 
 
 

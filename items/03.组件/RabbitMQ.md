@@ -126,3 +126,21 @@
 - []()
 - []()
 - []()
+
+
+
+###  打开日志
+
+rabbitmq-plugins list  #查看插件列表
+
+rabbitmq-plugins enable rabbitmq_tracing #rabbitmq启用trace插件
+
+rabbitmqctl trace_on #打开trace的开关
+
+rabbitmqctl trace_on -p test_host #打开trace的开关(test_host为需要日志追踪的vhost)
+
+rabbitmqctl trace_off #关闭trace的开关
+
+rabbitmq-plugins disable rabbitmq_tracing #rabbitmq关闭Trace插件
+
+rabbitmqctl set_user_tags rabbitmq administrator #只有administrator的角色才能查看日志界面
